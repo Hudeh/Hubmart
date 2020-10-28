@@ -66,8 +66,6 @@ function SignupForm(props) {
               label="Email Address"
             />
             <Field name="password" type="password" component={renderField} label="Password" />
-            <Field name="password" type="password" component={renderField} label="Password" />
-            <Field name="password" type="password" component={renderField} label="Password" />
           </div>
           <div className="vendor">
             <Field name="first Name" type="first Name" component={renderField} label="first Name" />
