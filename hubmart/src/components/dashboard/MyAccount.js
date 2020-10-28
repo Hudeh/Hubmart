@@ -10,12 +10,11 @@ import { logoutUser } from "../../actions/auth/actions";
       <p
         style={{ textDecoration: "none", color: "#00aeff",cursor:'pointer' }}
           >
-          Hello {currentUser.user.username} not {currentUser.user.username}?{" "}
-          <span style={{cursor:'pointer' }} onClick={() => {logoutUser();history.push("/")}}>Logout</span>
+          Hello {currentUser.user.username} 
       </p>
       <p>
         From your account dashboard you can view your{" "}
-        <Link to='/'style={{ textDecoration: "none", color: "#00aeff" }}>recent orders, </Link> manage
+        <Link to='/'style={{ textDecoration: "none", color: "#00aeff" }}>recent order, </Link> manage
         your{" "}
         <Link to='/' style={{ textDecoration: "none", color: "#00aeff" }}>
           shipping and billing addresses,

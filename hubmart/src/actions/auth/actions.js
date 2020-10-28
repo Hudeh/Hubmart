@@ -83,12 +83,14 @@ export const loginUser = ({ username, password }) => async (dispatch) => {
    
   } catch (error) {
     // DISPATCH LOGIN_FAIL
-    dispatch({ type: LOGIN_FAIL });    dispatch(stopSubmit("loginForm", error.response.data));
+    dispatch({ type: LOGIN_FAIL });    
+    dispatch(stopSubmit("loginForm", error.response.data));
     // DISPATCH SET ALERT
     if (error.response.data) {
       error.response.data.username &&
-        error.response.data.username.map((err) =>
-          dispatch(showAuthMessage(`Username: ${err}`, error.response.status, "danger"))
+        error.response.data.username.map((err) =>{
+          dispatch(showAuthMessage(`Username: ${err}`, error.response.status, "danger"));
+          console.log(err)}
         );
 
       error.response.data.password &&
