@@ -6,8 +6,8 @@ import authReducer from './authReducer/reducer';
 import cartReducer from './cartReducer/reducer';
 import allProductReducer from './productReducer/reducer';
 import headerReducer from './headerReducer/reducer'
-
-const rootReducer = combineReducers({
+import {LOGOUT_SUCCESS} from '../actions/auth/types'
+const appReducer = combineReducers({
     form: formReducer,
     authReducer,
     headerReducer,
@@ -20,5 +20,11 @@ const persistConfig = {
     storage,
     whitelist: ['cartReducer']
 }
-
+const rootReducer = (state, action) => {
+    if (action.type === LOGOUT_SUCCESS) {
+      state = undefined;
+    }
+    return appReducer(state, action);
+  };
+  
 export default persistReducer(persistConfig, rootReducer)
