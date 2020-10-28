@@ -1,0 +1,205 @@
+.footer{
+    display: block;
+    margin-top:120px;
+}
+.newsletter{
+    display: flex;
+    background: #F15A22;
+    border-top: 15px black solid;
+    color: white;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: justify;
+}
+.newsletter p{
+    margin-left: -50px;
+    height: 45px;
+    font-size-adjust: 20px;
+    margin-top: 1.8rem;
+    font-size: 15px;
+}
+.news-email {
+    padding-right: 1rem;
+    height: 36px;
+    width: 330px;
+    font-size-adjust: 20px;
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: none;
+}
+.submit{
+    margin-left: -101px;
+    height: 37.6px;
+    font-size-adjust: 20px;
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    background-color: rgb(51, 50, 50);
+}
+.newsletter h2{
+    margin-left: -95px;
+    height: 45px;
+    font-size: 25px;
+}
+.footer-menu{
+    display: flex;
+    background: rgb(255, 255, 255);
+    height: 80%;
+    margin-bottom: 0px;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.copyright {
+    background: whitesmoke;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    padding-top: 1rem;
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+.footer-menu-link1, .footer-menu-link2, .footer-menu-link3, .footer-menu-link4, .footer-menu-link5{
+    display: block;
+    cursor: pointer;
+    font-size-adjust: 10px;
+    line-height: 1rem;
+}
+.footer-menu-link img{
+    height: 60px;
+    text-decoration: none;
+}
+
+.sendicon{
+    height: 45px !important;
+    width: 30px !important;
+    margin-right: 0%;
+    padding-right: 0%;
+}
+::-webkit-input-placeholder { 
+    color: grey;
+    padding-left: 20px;
+  }
+  
+  :-ms-input-placeholder { 
+    color: grey;
+    padding-left: 20px;
+  }
+  @media only screen and (max-width: 657px) {
+      .footer {
+          margin-left: -90px;
+          display:block;
+          border: 2px solid black;
+      }
+      .newsletter, .footer-menu-link1, .footer-menu-link2, .footer-menu-link3 {
+          display: none;
+      }
+      .footer-menu-link4 {
+        margin-top: -120px;
+        margin-left: -450px;
+        font-size :20px;
+        padding-top: 150px;
+        font-size :10px;
+        font-weight: bold;
+        color:royalblue;
+    }
+    .footer-menu-link5 {
+        margin-top: -120px;
+        margin-left: -20px;
+        font-size :20px;
+      padding-top: 150px;
+        font-size :10px;
+        font-weight: bold;
+        color:royalblue;
+    }
+    .img-logo {
+        margin-top: 80px;
+        margin-left: 100px;
+      padding-top: 50px;
+    }
+    }
+@media only screen and (max-width: 786px) {
+  .footer {
+      margin-left: -90px;
+      display:block;
+  }
+  .footer-menu {
+      height: 400px;
+      width: 600px;
+  }
+  .newsletter, .footer-menu-link1, .footer-menu-link2, .footer-menu-link3 {
+      display: none;
+  }
+  .footer-menu-link4 {
+      padding-top: 150px;
+
+      font-size :10px;
+      font-weight: bold;
+      color:royalblue;
+  }
+  .footer-menu-link5 {
+      padding-top: 150px;
+      font-size :10px;
+      font-weight: bold;
+      color:royalblue;
+  }
+  .img-logo {
+      margin-top: 10px;
+  }  
+} 
+@media only screen and (max-width: 992px) {
+  .footer {
+      margin-left: -90px;
+      max-width:990px;
+      display:block;
+  }
+  .footer-menu {
+      height: 400px;
+      width: 600px;
+  }
+  .newsletter, .footer-menu-link1, .footer-menu-link2, .footer-menu-link3 {
+      display: none;
+  }
+  .footer-menu-link4 {
+      padding-top: 50px;
+      padding-left: 100px;
+      font-size :20px;
+      font-weight: bold;
+      color:royalblue;
+  }
+  .footer-menu-link5 {
+      padding-top: 50px;
+      padding-left: 50px;
+      font-size :20px;
+      font-weight: bold;
+      color:royalblue;
+  }
+  .img-logo {
+      margin-top: 120px;
+      margin-left:250px;
+  }
+}
+@media only screen and (max-width: 1200px)  {
+    .news-img {
+        margin-left: -10px;
+        display: none;
+    }
+ .newsletter {
+   padding-left: 30px;
+ }
+ .footer-menu-link1 {
+     padding-left: 10px;
+ }
+}

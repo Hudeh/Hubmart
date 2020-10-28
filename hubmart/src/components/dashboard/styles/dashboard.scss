@@ -1,0 +1,92 @@
+.breadcrumbs{
+    display: flex;
+    margin-left: 126px;
+}
+h2{
+    font-size: 45px;
+    color: #F15A22;
+}
+h3{
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+}
+.account{
+    display: flex;
+    width: 100%;
+}
+.account-links {
+    padding-left: 6.2rem;
+    width: 17rem;
+    float: left;
+}
+.account-link ul{
+    list-style-type: none;
+}
+.account-link li{
+   
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: .1rem rgb(211, 209, 209) solid;
+    margin-left: -2.1rem;
+}
+.dashbord-view{
+    margin-top: 7rem;
+    margin-left: 35px;
+    width: 70%;
+}
+.dashbord-view input{
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: .1rem rgb(211, 208, 208) solid;
+}
+.dashbord-view input:focus{
+    border: 1px#66afe9 solid;
+}
+
+/* orders viewpage */
+.not-active{
+    background-color:#F15A22;
+    color: white;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-left: 9px solid #a14b2e;
+} 
+.not-active p{
+    padding-left: 15px;
+}
+.not-active button{
+    background: inherit;
+    color: white;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    padding-right: 15px;
+    border-left: .1rem rgb(216, 210, 210) solid;
+}
+
+/* 'add-payment-method' */
+
+.add-payment-method button{
+    margin-top: 2rem;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: none;
+    height: 52.4px;
+    width: 202px;
+    padding: 15px 30px 15px 30px;
+    cursor: pointer;
+    background-color: #efecec;
+    color: rgb(0, 0, 0);
+}
+.add-payment-method button:hover{
+    background-color: #333e48;
+    color: white;
+}

@@ -1,0 +1,100 @@
+.promo {
+  display: flex;
+  width: 1300px;
+  max-width: 100%;
+  margin: 30px 109px 20px 109px;
+  background-color: white;
+  .first-div-promo {
+    display: block;
+    max-width: 100%;
+    .v1 {
+      height: 328px;
+      width: 550px;
+      cursor: pointer;
+    }
+    .v2 {
+      height: 160px;
+      width: 550px;
+      margin: 10px 0 0 0;
+      cursor: pointer;
+    }
+  }
+  .second-div-promo {
+    display: block;
+    max-width: 100%;
+    .first-div {
+      display: flex;
+      max-width: 100%;
+      .v3{
+        height: 163px;
+        width: 360;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+      .v4{
+        height: 163px;
+        width: 380px;
+        cursor: pointer;
+      }
+    }
+    .sec-div {
+      display: block;
+      max-width: 100%;
+      .v5 {
+        height: 146px;
+        width: 703px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      .v6 {
+        height: 160px;
+        width: 740px;
+        margin: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 657px) {
+  .row {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    border: 2px solid black;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .row {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .row {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .row {
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .row {
+    display: flex;
+    margin: auto;
+    width: 85%;
+    margin-top: 25px;
+  }
+}
