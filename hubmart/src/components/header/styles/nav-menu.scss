@@ -29,45 +29,65 @@
     display: none;
   }
 }
-// @media only screen and (max-width: 768px) {
-//   .nav {
-//     display: none;
-//   }
-// }
-// @media only screen and (max-width: 992px) {
-//   .nav {
-//     display: none;
-//   }
-// }
+@media only screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+}
 
-// @media only screen and (min-width: 1200px) {
-//   .nav {
-//     margin: 0 -98px 0 0px;
-//     padding: 0 -100px 0 250px;
-//     justify-content: flex-start;
-//     display: flex;
-//     align-items: center;
-//     text-align: center;
-//     height: 50px;
-//     // width: 1499px;
-//   .list {
-//     margin: 0 0 0 150px;
-//     padding: 0 -100px 0 250px;
-//     justify-content: flex-start;
-//     display: flex;
-//     align-items: center;
-//     text-align: center;
-//     width: 100%;
-//     p {
-//       font-size: 15px;
-//     }
-//   }
-// }
-// }
+@media only screen and (min-width: 1200px) {
+  .nav {
+    margin: 0 -98px 0 0px;
+    padding: 0 -100px 0 250px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 1499px;
+  .list {
+    margin: 0 0 0 150px;
+    padding: 0 -100px 0 250px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    p {
+      font-size: 15px;
+    }
+  }
+}
+}
+@media only screen and (min-width: 1600px) {
+  .nav {
+    margin: 0 -98px 0 0px;
+    padding: 0 -100px 0 250px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 1499px;
+  .list {
+    margin: 0 0 0 150px;
+    padding: 0 -100px 0 250px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    p {
+      font-size: 15px;
+    }
+  }
+}
+}
 
-// @media only screen and (max-width: 1200px) {
-//   .nav {
-//     display: none;
-//   }
-// }
+
 
