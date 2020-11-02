@@ -158,37 +158,6 @@
       margin-top: 10px;
   }  
 } 
-@media only screen and (min-width: 850px) {
-    .footer {
-        margin-left: -90px;
-        display:block;
-        margin-top: 980px;
-        border: 2px solid black;
-    }
-    .footer-menu {
-        height: 400px;
-        width: 600px;
-    }
-    .newsletter, .footer-menu-link1, .footer-menu-link2, .footer-menu-link3 {
-        display: none;
-    }
-    .footer-menu-link4 {
-        padding-top: 150px;
-  
-        font-size :10px;
-        font-weight: bold;
-        color:royalblue;
-    }
-    .footer-menu-link5 {
-        padding-top: 150px;
-        font-size :10px;
-        font-weight: bold;
-        color:royalblue;
-    }
-    .img-logo {
-        margin-top: 10px;
-    }  
-  } 
 @media only screen and (max-width: 992px) {
   .footer {
       margin-left: -90px;
