@@ -114,3 +114,13 @@
 .product_card:hover {
   box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.4);
 }
+@media screen and (max-width:657px) {
+  .products {
+    display: none;
+  }
+}
+@media screen and (max-width:786px) {
+  .products {
+   margin-left: -300px;
+  }
+}
