@@ -1,3 +1,9 @@
+.billing-header {
+    margin-top: 200px;
+    color: black;
+    margin-left: -900px;
+    margin-bottom: -40px;
+}
 .labels{
     display: flex;
     float: start center;
@@ -5,13 +11,26 @@
 .label{
     margin-top:2rem;
 }
+#firstname {
+    padding-bottom: 5px;
+    margin-top: 100px;
+    margin-left: 165px;
+}
 #lastname{
-    margin-left: 26rem;
+    padding-bottom: 5px;
+    margin-top: 100px;
+    margin-left: 580px;
 }
 .account-names-inputs input{
     width: 40%;
     height: 40px;
+    margin-left: 160px;
     padding-left: 16px;
+    outline: none;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
     margin-top: 5px;
 }
 .account-names-inputs{
@@ -19,11 +38,114 @@
     justify-content:space-between;
     width: 90%;
 }
-.account-user-input input{
+.label {
+    padding-bottom: 5px;
+    margin-left: 165px;  
+}
+.account-user-input select, .account-user-input input{
     margin-top: 5px;
-    width: 88%;
+    width: 78%;
+    outline: none;
+    margin-left: 160px;
     height: 40px;
     padding-left: 16px;
+    font-size: 15px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.postal {
+    padding-bottom: 5px;
+    margin-left: 165px;  
+    margin-top: 20px;
+}
+.account-postal-input input{
+    margin-top: 5px;
+    width: 78%;
+    outline: none;
+    margin-left: 160px;
+    height: 40px;
+    padding-left: 16px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.log {
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-left: 165px;  
+}
+.account-log-input select{
+    margin-top: 5px;
+    width: 20%;
+    margin-left: 160px;
+    height: 40px;
+    outline: none;
+    padding-left: 16px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.options {
+    font-size: 15px;
+}
+.create-account {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 165px;
+}
+.create {
+    margin-top: -2px;
+    margin-left: 3px;
+    font-size:18px;
+}
+.password {
+    padding-bottom: 5px;
+    margin-left: 165px;  
+}
+.account-password-input input{
+    margin-top: 5px;
+    width: 78%;
+    outline: none;
+    margin-left: 160px;
+    height: 40px;
+    padding-left: 16px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.shipping-account {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 165px;
+}
+.shipping-header {
+    margin-top: 200px;
+    color: black;
+    margin-left: -900px;
+}
+.shipping {
+    margin-top: -2px;
+    margin-left: 3px;
+    font-size:18px;
+}
+.account-ordernote-input input{
+    margin-top: 5px;
+    width: 885px;
+    outline: none;
+    margin-left: 160px;
+    height: 140px;
+    padding-left: 16px;
+    border-color: skyblue;
+    font-size: 15px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .account-submit-button button{
     outline: none;
@@ -43,6 +165,27 @@
     color: rgb(0, 0, 0);
 }
 .account-submit-button button:hover{
+    background-color: black;
+    color: white;
+}
+.account-back-button button{
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: .1rem rgb(211, 208, 208) solid;
+    float: left;
+    right: 1;
+    width: 120px;
+    height: 46px;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    cursor: pointer;
+    background-color: #efecec;
+    color: rgb(0, 0, 0);
+}
+.account-back-button button:hover{
     background-color: black;
     color: white;
 }

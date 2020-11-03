@@ -1,10 +1,11 @@
 import React from 'react'
 import {reduxForm} from 'redux-form'
 
-function OrderPreview() {
+function OrderPreview(props) {
+    const {previousPage} = props
     return (
         <div>
-            oder view
+            <button type='button' onClick={previousPage}> Back</button>
         </div>
     )
 }
