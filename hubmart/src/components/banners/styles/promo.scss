@@ -42,13 +42,13 @@
       max-width: 100%;
       .v5 {
         height: 146px;
-        width: 703px;
+        width: 800px;
         margin: 10px;
         cursor: pointer;
       }
       .v6 {
         height: 160px;
-        width: 740px;
+        width: 800px;
         margin: 10px;
         cursor: pointer;
       }
@@ -59,19 +59,21 @@
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 657px) {
   .promo {
-    max-width: 100%;
+    width: 420px;
     display: block;
     .first-div-promo {
       display: block;
       .v1 {
         height: 328px;
-        width: 100%;
+        padding-left: 60px;
+        max-width: 100%;
         cursor: pointer;
         margin-left: -100px;
       }
       .v2 {
         height: 160px;
-        width: 100%;
+        padding-left: 60px;
+        max-width:600px ;
         cursor: pointer;
         margin-left: -100px; 
       }
@@ -83,6 +85,7 @@
        .v3 {
         margin-left: -100px; 
         height: 163px;
+        padding-left: 60px;
         width: 100%;
         cursor: pointer;
       }
@@ -90,6 +93,7 @@
         margin-left: -100px; 
         height: 163px;
         width: 100%;
+        padding-left: 60px;
         cursor: pointer;
       }
      }
@@ -108,8 +112,9 @@
  
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (min-width: 786px) {
   .promo {
+    width: 100%;
     display: block;
     .first-div-promo {
       display: block;
@@ -204,7 +209,7 @@
     }
   }
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 870px) {
   .promo {
     display: flex;
     max-width: 770px;
@@ -257,59 +262,7 @@
     }
   }
 }
-@media screen and (min-width: 992px) {
-  .promo {
-    display: flex;
-    max-width: 770px;
-    .first-div-promo {
-      display: block;
-      .v1 {
-        height: 187px;
-        width: 256px;
-        cursor: pointer;
-      }
-      .v2 {
-        height: 187px;
-        width: 256px;
-        cursor: pointer;
-      }
-    }
-    .second-div-promo {
-      display: block;
-     .first-div {
-       display: flex;
-       .v3{
-        height: 93px;
-        width: 206px;
-        margin: 0 10px;
-        cursor: pointer;
-      }
-      .v4{
-        height: 94px;
-        width: 206px;
-        cursor: pointer;
-      }
-     }
 
-    }
-    .sec-div {
-      display: block;
-      max-width: 100%;
-      .v5 {
-        height: 86px;
-       max-width: 405px;
-        margin: 10px;
-        cursor: pointer;
-      }
-      .v6 {
-        height: 86px;
-        max-width: 405px;
-        margin: 10px;
-        cursor: pointer;
-      }
-    }
-  }
-}
 @media screen and (max-width: 992px) {
   @media screen and (min-width: 992px) {
     .promo {
@@ -358,6 +311,120 @@
         .v6 {
           height: 86px;
           max-width: 405px;
+          margin: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  .promo {
+    display: flex;
+    max-width: 900px;
+    .first-div-promo {
+      display: block;
+      .v1 {
+        height: 187px;
+        width: 300px;
+        cursor: pointer;
+      }
+      .v2 {
+        height: 187px;
+        width: 300px;
+        cursor: pointer;
+      }
+    }
+    .second-div-promo {
+      display: block;
+     .first-div {
+       display: flex;
+       .v3{
+        height: 93px;
+        width: 250px;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+      .v4{
+        height: 94px;
+        width: 250px;
+        cursor: pointer;
+      }
+     }
+
+    }
+    .sec-div {
+      display: block;
+      max-width: 100%;
+      .v5 {
+        height: 86px;
+       max-width: 455px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      .v6 {
+        height: 86px;
+        max-width: 455px;
+        margin: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1260px) {
+
+  .promo {
+    display: flex;
+    width: 1280px;
+    max-width: 100%;
+    margin: 30px 109px 20px 109px;
+    background-color: white;
+    .first-div-promo {
+      display: block;
+      max-width: 100%;
+      .v1 {
+        height: 328px;
+        width: 650px;
+        cursor: pointer;
+      }
+      .v2 {
+        height: 160px;
+        width: 650px;
+        margin: 10px 0 0 0;
+        cursor: pointer;
+      }
+    }
+    .second-div-promo {
+      display: block;
+      max-width: 100%;
+      .first-div {
+        display: flex;
+        max-width: 100%;
+        .v3{
+          height: 163px;
+          width: 300px;
+          margin: 0 10px;
+          cursor: pointer;
+        }
+        .v4{
+          height: 163px;
+          width: 300px;
+          cursor: pointer;
+        }
+      }
+      .sec-div {
+        display: block;
+        max-width: 100%;
+        .v5 {
+          height: 146px;
+          width: 783px;
+          margin: 10px;
+          cursor: pointer;
+        }
+        .v6 {
+          height: 160px;
+          width: 800px;
           margin: 10px;
           cursor: pointer;
         }

@@ -20,8 +20,8 @@ const Promo = (history) => {
             <img src={voucher3} alt="v1"className="v4" />
         </div>
         <div className='sec-div'>
-          <img src={voucher4} alt="v1" className="v5"/>
-          <img src={voucher5} alt="v1" className="v6" />
+          <img src={voucher4} alt="v5" className="v5"/>
+          <img src={voucher5} alt="v6" className="v6" />
         </div>
       </div>
     </div>
