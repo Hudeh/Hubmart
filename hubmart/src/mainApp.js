@@ -40,9 +40,9 @@ import TrackOrders from "./components/product/TrackOrders";
 import ViewCartPage from "./components/dashboard/ViewCartPage";
 import PrivateRoute from "./components/main/PrivateRoute";
 import {loadUser} from './actions/auth/actions'
-import CheckOutPage from './components/dashboard/CheckOutPage';
+import CheckoutForm from './components/checkout/CheckOutPage';
 import setAuthToken from './utils/setAuthToken';
-// import Shop from './components/product/Shop';
+
 
 
 library.add(
@@ -96,7 +96,7 @@ const MainApp = () =>{
                <Route path="/shop" component={Shop} />
                <Route path="/track-your-order" component={TrackOrders} />
                <Route path="/my-cart" component={ViewCartPage} />
-               <Route path="/check-out" component={CheckOutPage} />
+               <Route path="/check-out" component={CheckoutForm} />
                <Route path="/login-signup" component={AuthLayout} />
              </div>
            </Switch>

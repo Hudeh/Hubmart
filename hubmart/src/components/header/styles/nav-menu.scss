@@ -1,7 +1,7 @@
 .nav {
   background-color: #f15a22;
   font-size: calc(5px + 2vmin);
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   height: 60px;
   .list {
     margin: 0 0 0 102px;
@@ -16,10 +16,13 @@
       padding-left: 15px;
     }
     .seprator {
-      border-left: 0.1px solid #857e85;
+      border-left: 0.1px solid #bbb7bb;
       height: 50px;
       margin-left: 10px;
       top: 0;
+    }
+    p:hover{
+      opacity: 0.8;
     }
   }
 }

@@ -47,7 +47,6 @@
           width: 33vw;
           height: 40px;
           outline: none;
-          border: 2px solid rgb(230, 230, 230);
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -142,7 +141,6 @@
           width: 33vw;
           height: 40px;
           outline: none;
-          border: 2px solid rgb(230, 230, 230);
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -201,7 +199,6 @@
           width: 60vw;
           height: 40px;
           outline: none;
-          border: 2px solid rgb(230, 230, 230);
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -236,7 +233,7 @@
             width: 65vw;
             height: 40px;
             outline: none;
-            border: 2px solid rgb(230, 230, 230);
+
             border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -273,7 +270,6 @@
           width: 60vw;
           height: 40px;
           outline: none;
-          border: 2px solid rgb(230, 230, 230);
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -308,7 +304,7 @@
             width: 65vw;
             height: 40px;
             outline: none;
-            border: 2px solid rgb(230, 230, 230);
+
             border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -344,7 +340,6 @@
           width: 60vw;
           height: 40px;
           outline: none;
-          border: 2px solid rgb(230, 230, 230);
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -378,8 +373,7 @@
           .signin-renderfield-input {
             width: 65vw;
             height: 40px;
-            outline: none;
-            border: 2px solid rgb(230, 230, 230);
+            outline: none;;
             border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -396,12 +390,11 @@
 @media only screen and (min-width: 850px) {
   .layout-container {
     max-height: 300px;
-    border: 2px solid black;
     max-width: auto;
     display: flex;
     .login-container  {
       box-sizing: border-box;
-       border: 2px solid black;
+  
       background-color: whitesmoke;
      width: 45vw;
     max-height: 1400px;
@@ -415,10 +408,9 @@
         width: 20px;
         .login-renderfield-input {
           width:320px;
-          border: 2px solid black;
+    
           height: 40px;
           outline: none;
-          border: 2px solid rgb(230, 230, 230);
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -458,7 +450,7 @@
       box-sizing: border-box;
       width: 45vw;
       background-color: whitesmoke;
-      border: 2px solid black;
+
      max-height: 3500px;
       margin-left: 7px;
       .signin-renderfield-layout {
@@ -471,9 +463,8 @@
           .signin-renderfield-input {
             width: 320px;
             height: 40px;
-            border: 2px solid black;
-            outline: none;
-            border: 2px solid rgb(230, 230, 230);
+      
+            outline: none;;
             border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;

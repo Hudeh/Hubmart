@@ -26,29 +26,18 @@ class Product(SafeDeleteModel):
     original_objects = SafeDeleteAllManager()
 
 
-class ProductItem(SafeDeleteModel):
-    _safedelete_policy = SOFT_DELETE_CASCADE
 
-
-    user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                            on_delete=models.CASCADE)
-    ordered = models.BooleanField(default=False)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-
-
-    def __str__(self):
-        return str(self.product)
-    original_objects = SafeDeleteAllManager()
 
 class Orders(SafeDeleteModel):
     _safedelete_policy = SOFT_DELETE_CASCADE
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                             on_delete=models.CASCADE)
-    order = models.ManyToManyField(ProductItem)
+                             on_delete=models.CASCADE,related_name="orders")
+    order = models.CharField(max_length=255,blank=True, null=True)
+    quantity= models.CharField(max_length=255,blank=True, null=True)
     ordered = models.BooleanField(default=False)
     start_date = models.DateTimeField(auto_now_add=True)
-    ordered_date = models.DateTimeField()
+    ordered_date = models.DateTimeField(auto_now_add=True)
     shipping_address = models.ForeignKey(
         'Address', related_name='shipping_address', on_delete=models.SET_NULL, blank=True, null=True)
     billing_address = models.ForeignKey(

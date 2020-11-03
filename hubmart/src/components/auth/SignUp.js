@@ -11,8 +11,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const validate = (values) => {
   const errors = {};
-  if (!values.username) {
-    errors.username = "Required";
+  if (!values.email) {
+    errors.email = "Required";
   }
   if (!values.password) {
     errors.password = "Required";
@@ -45,9 +45,9 @@ function SignupForm(props) {
     props.registerUser(formValues);
   };
 
-  // if (props.isAuthenticated) {
-  //   return <Redirect to='/' />;
-  // }
+  if (props.isAuthenticated) {
+    return <Redirect to='/my-account' />;
+  }
   const { pristine, reset, submitting, alertMessage, showMessage } = props;
 
   return (
@@ -60,15 +60,14 @@ function SignupForm(props) {
           </p>
           <div className="users">
             <Field
-              name="Email Address"
-              type="Email Address"
+              name="email"
+              type="email"
               component={renderField}
               label="Email Address"
             />
             <Field name="password" type="password" component={renderField} label="Password" />
           </div>
-          <div className="vendor">
-            <Field name="first Name" type="first Name" component={renderField} label="first Name" />
+          {/* <div className="vendor">
             <Field name="last Name" type="last Name" component={renderField} label="last Name" />
             <Field name="Shop Name" type="Shop Name" component={renderField} label="Shop Name" />
             <Field name="Shop URL" type="Shop URL" component={renderField} label="Shop URL" />
@@ -78,8 +77,8 @@ function SignupForm(props) {
               component={renderField}
               label="Phone Number"
             />
-          </div>
-          <div className="signup-customer">
+          </div> */}
+          {/* <div className="signup-customer">
             <div className="signup-customer-input">
               <input type="radio" />
               <p className="signup-customer-note">I am a customer</p>
@@ -90,7 +89,8 @@ function SignupForm(props) {
                 <p className="signup-vendor-note">I am a vendor</p>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Field name="non_field_errors" type="hidden" component={hiddenField} />
           <p className="signup-note">
             Your personal data will be used to support your experience throughout this website, to
             manage access to your account, and for other purposes described in our privacy policy.

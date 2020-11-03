@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Product,ProductItem, Orders, Address
+from . models import Product, Orders, Address
 from safedelete.admin import SafeDeleteAdmin, highlight_deleted
 
 
@@ -11,12 +11,6 @@ class ProductAdmin(SafeDeleteAdmin):
 
 admin.site.register(Product, ProductAdmin)
 
-
-class ProductItemAdmin(SafeDeleteAdmin):
-    list_display = (highlight_deleted, 'product','ordered','user') + SafeDeleteAdmin.list_display
-    list_filter = ('product',) + SafeDeleteAdmin.list_filter
-
-admin.site.register(ProductItem, ProductItemAdmin)
 
 
 class OrdersAdmin(SafeDeleteAdmin):

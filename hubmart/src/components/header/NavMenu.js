@@ -23,6 +23,8 @@ export default function NavMenu() {
             <p >Home Cleaning & Consumables</p>  
             <div className='seprator'></div>
             <p >Sell On Hubmart</p>
+            <div className='seprator'></div>
+            <p >Promo</p>
             </div>
         </nav>
     )

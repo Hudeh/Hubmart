@@ -17,7 +17,7 @@ import {
     dispatch(loadAllProduct())
     try {
       
-      const res = await axios.get('/api/products/')
+      const res = await axios.get('/api/v1/products')
       dispatch({type:FETCH_ALL_PRODUCT_SUCCESS,payload:res.data})
     } catch (error) {
       dispatch({type:FETCH_ALL_PRODUCT_FAILS, payload:error.message})
@@ -33,7 +33,7 @@ import {
   
   export const fetchSingleProduct = productId => async(dispatch) =>{
     try {
-      const res = await axios.get(`/api/products/${productId}`)
+      const res = await axios.get(`/api/v1/products/${productId}`)
       dispatch({
         type: FETCH_SINGLE_PRODUCT_DETAILS_SUCCESS,
         payload:res.data
@@ -42,3 +42,4 @@ import {
       dispatch({type: FETCH_SINGLE_PRODUCT_DETAILS_FAILS, payload: error.message})
     }
   };
+ 

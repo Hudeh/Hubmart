@@ -11,31 +11,23 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class RegisterSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(max_length=68, min_length=8)
+    email = serializers.EmailField()
     class Meta:
         model = MyUser
-        fields = ['id','email', 'username', 'password']
+        fields = ['email', 'password']
         extra_kwargs = {'password': {'write_only': True}}
 
-
-    
-    # def create(self, validated_data):
-    #     user = MyUser.objects.create_user(
-    #         email=validated_data['email'],
-    #         username=validated_data['username']
-    #     )
-    #     user.set_password(validated_data['password'])
-    #     user.save()
-    #     return user
     def create(self, validated_data):
         user = MyUser.objects.create_user(**validated_data)
         return user
 
 class LoginSerializer(serializers.Serializer):
-    username = serializers.CharField()
+    email = serializers.EmailField()
     password = serializers.CharField()
 
     def validate(self, data):
         user = authenticate(**data)
         if user and user.is_active:
             return user
-        raise serializers.ValidationError("Incorrect Credentials: Username or Password")
+        raise serializers.ValidationError("Incorrect Credentials: Email or Password")

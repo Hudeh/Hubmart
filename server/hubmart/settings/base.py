@@ -81,13 +81,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'knox.auth.TokenAuthentication',
     ),
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': 10,
     'DATETIME_FORMAT':"%m/%d/%Y %H:%M:%S"
 }
 
-#djangorestql for querying dynamic data
-# GRAPHENE = {
-#     'SCHEMA': 'cloudsuit.schema.schema'
-# }
 
 
 
@@ -126,5 +124,20 @@ SUIT_CONFIG = {
     ),
 
     # misc
-    'LIST_PER_PAGE': 15
+    'LIST_PER_PAGE': 20
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+MAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+# PASSWORD_RESET_TIMEOUT_DAYS = 2
+DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER')
+
+
+
+
+# LOGOUT_REDIRECT_URL='/login/'
+# LOGIN_REDIRECT_URL='/profile/'

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from 'react'
+import { connect, useDispatch } from 'react-redux'
 import { Link, NavLink, Switch, Route, withRouter } from "react-router-dom";
-import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles/dashboard.scss";
 import OrderView from "./OrderView";
@@ -15,8 +15,15 @@ import Address from "./Address";
 import { createStructuredSelector } from "reselect";
 import { logoutUser } from "../../actions/auth/actions";
 import { currentUserSelector } from "../../reducers/authReducer/selector";
-
+import { fetchOrders } from '../../actions/cart/actions'
 function DashBoard({ match, currentUser, logout, history }) {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+      dispatch(fetchOrders());
+      return () =>{
+          // 
+      }
+  },[])
   return (
     <>
       <div className="breadcrumbs">
@@ -151,7 +158,7 @@ function DashBoard({ match, currentUser, logout, history }) {
               <Shipping />
             </Route>
             <Route path={`${match.path}`}>
-              <MyAccount currentUser={currentUser} logout={logout} />
+              <OrderView  currentUser={currentUser} logout={logout} />
             </Route>
           </Switch>
         </div>

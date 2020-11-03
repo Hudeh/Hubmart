@@ -47,7 +47,7 @@ const ProductDetails = (props) => {
         </div>
 
         <div className="product-item-details">
-          <img alt="product" src={cake} className="product-item-img" />
+          <img alt="product" src={singleProduct.image} className="product-item-img" />
           <div className="product-item-properties">
             <p className="product-item-slug">HubDeli</p>
             <p className="product-item-name">{singleProduct.name}</p>
