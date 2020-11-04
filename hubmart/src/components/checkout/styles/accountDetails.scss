@@ -27,6 +27,8 @@
     margin-left: 160px;
     padding-left: 16px;
     outline: none;
+    font-size: 15px;
+    border: .1rem rgb(211, 208, 208) solid;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -47,6 +49,7 @@
     width: 78%;
     outline: none;
     margin-left: 160px;
+    border: .1rem rgb(211, 208, 208) solid;
     height: 40px;
     padding-left: 16px;
     font-size: 15px;
@@ -64,7 +67,9 @@
     margin-top: 5px;
     width: 78%;
     outline: none;
+    font-size: 15px;
     margin-left: 160px;
+    border: .1rem rgb(211, 208, 208) solid;
     height: 40px;
     padding-left: 16px;
     border-bottom-right-radius: 20px;
@@ -82,7 +87,9 @@
     width: 20%;
     margin-left: 160px;
     height: 40px;
+    border: .1rem rgb(211, 208, 208) solid;
     outline: none;
+    font-size: 15px;
     padding-left: 16px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -101,22 +108,6 @@
     margin-top: -2px;
     margin-left: 3px;
     font-size:18px;
-}
-.password {
-    padding-bottom: 5px;
-    margin-left: 165px;  
-}
-.account-password-input input{
-    margin-top: 5px;
-    width: 78%;
-    outline: none;
-    margin-left: 160px;
-    height: 40px;
-    padding-left: 16px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
 .shipping-account {
     display: flex;
@@ -164,9 +155,216 @@
     background-color: #efecec;
     color: rgb(0, 0, 0);
 }
+.order-header {
+    display: flex;
+    border-bottom: .1rem rgb(211, 208, 208) solid;
+    width: 730px;
+    margin-left: 395px;
+    font-weight: 490;
+}
+.order-product {
+    margin-top: 100px;
+    color: black; 
+    font-size: 15px;
+    font-weight: 490;
+}
+.order-total {
+    margin-top: 100px;
+    font-weight: 490;
+    color: black;
+    font-size: 15px;
+    margin-left: 600px;
+}
+.order-details1 {
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+    font-weight: 490;
+    width: 690px;
+    margin-left: 395px;
+    padding-bottom: 10px;
+    border-bottom: .1rem rgb(211, 208, 208) solid;
+}
+.order-right-details1 {
+    color: black; 
+    font-size: 15px;
+   margin-left: 370px;
+   font-weight: 490;
+
+}
+.order-right-details2 {
+    color: black; 
+    font-size: 15px;
+    font-weight: 490;
+   margin-left: 570px;
+
+}
+.order-right-details3 {
+    color: black; 
+    font-size: 15px;
+    font-weight: 490;
+   margin-top: 50px;
+   margin-left: 500px;
+
+}
+.order-right-details3 {
+    color: black; 
+    font-size: 15px;
+    font-weight: 490;
+   margin-top: 50px;
+   margin-left: 500px;
+
+}
+.order-left-details {
+    color: black; 
+    font-size: 15px;
+    font-weight: 490;
+    margin-left: -20px;
+}
+.order-details2{
+    margin-left: 395px;
+    display: flex;
+    font-weight: 490;
+    padding-bottom: 10px;
+    width: 690px;
+    border-bottom: .1rem rgb(211, 208, 208) solid;
+    list-style-type: none;
+    overflow: hidden;
+}
+.order-details3{
+    margin-left: 395px;
+    display: flex;
+    font-weight: 490;
+    padding-bottom: 10px;
+    width: 690px;
+    border-bottom: .1rem rgb(211, 208, 208) solid;
+    list-style-type: none;
+    overflow: hidden;
+}
+.order-input {
+    list-style-type: none;
+    display: block;
+    margin-left: -50px;
+}
+.order-flatrate, .order-store {
+  display: flex;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+.flatrate, .store {
+    margin-top: -2px;
+}
+.order-sumtotal {
+    color: black; 
+    font-size: 15px;
+    font-weight: 490;
+}
+.order-details4{
+    margin-left: 395px;
+    display: flex;
+    font-weight: 490;
+    padding-bottom: 20px;
+    width: 730px;
+    list-style-type: none;
+    overflow: hidden;
+}
+.order-right-details4 {
+    color: black; 
+    font-size: 15px;
+    font-weight: 490;
+   margin-top: -40px;
+   margin-left: 1050px;
+
+}
 .account-submit-button button:hover{
     background-color: black;
     color: white;
+}
+.payment-header {
+    color: black;
+    margin-left: 300px;
+    margin-bottom: -40px;
+    padding-bottom: 20px;
+    width:300px;
+}
+.order-payment {
+    margin-left: 380px;
+    margin-top: 40px;
+    font-weight: 400px;
+}
+.order-payment-mode {
+    width: 760px;
+    margin-left: 360px;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color:whitesmoke ;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    font-weight: 400px;
+    border: .1rem rgb(211, 208, 208) solid;
+}
+.order-note {
+    margin-left: 360px;
+    margin-top: 20px;
+    font-weight: 490;
+}
+.order-note-color {
+    color: #014c8c;
+    margin-top: -20px;
+    font-weight: bold;
+    margin-left: 305px;
+}
+.order-approval {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 345px;
+}
+.order-approval-note {
+    margin-top: -2px;
+}
+.approval-note {
+    margin-top: -20px;
+    margin-left: 276px;
+    color: #014c8c;
+    font-weight: bold;
+}
+.order-payment-button button {
+    width: 846px;
+    color: white;
+    padding: 20px 41px 20px 21px;
+    height: 65px;
+    background-color: #f15822;
+    border: 0px outset #f15822;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-left: 20rem;
+    border-top-right-radius: 50px;
+}
+.order-payment-button button:hover{
+    background-color: black;
+    color: white;
+}
+.back-button button{
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: .1rem rgb(211, 208, 208) solid;
+    float: left;
+    left: 1;
+    font-size: 15px;
+    width: 120px;
+    height: 46px;
+    margin-top: 4rem;
+    margin-left: 20rem;
+    cursor: pointer;
+    background-color: #efecec;
+    color: rgb(0, 0, 0);
 }
 .account-back-button button{
     outline: none;

@@ -5,7 +5,7 @@ import {reduxForm} from 'redux-form'
 
 
 const Shipping = (props) =>{
-    const {handleSubmit} = props;
+    const {handleSubmit,previousPage} = props;
     return (
         <div> 
         <form onSubmit={handleSubmit}>
@@ -26,7 +26,7 @@ const Shipping = (props) =>{
                 <button type='submit'>Next</button>
             </div>
             <div className="account-back-button">
-                <button type='submit'>back</button>
+                <button type='button' onClick={previousPage}>back</button>
             </div>
         </form>
         </div>

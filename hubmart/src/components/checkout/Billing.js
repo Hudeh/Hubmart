@@ -14,13 +14,13 @@ const Billing = (props) => {
                     <label id='lastname'>Last name *</label>
                 </div>
                 <div className='account-names-inputs'>
-                    <input type='text' />
-                    <input type='text' />
+                    <input type='text' placeholder='first name' />
+                    <input type='text'  placeholder='last name'/>
                 </div>
 
 
                 <div className='label'>
-                     <label >Street address*</label>
+                     <label>Street address*</label>
                 </div>
                 
                 <div className="account-user-input">
@@ -39,6 +39,7 @@ const Billing = (props) => {
                 
                 <div className="account-user-input">
                     <select className="account-user-input">
+                    <option value=''></option>
                     <option value=''>Lagos</option>
                       <option value=''>Ogun</option>
                       <option value=''>Oyo</option>
@@ -73,6 +74,7 @@ const Billing = (props) => {
                 </div>
                 <div className="account-log-input">
                   <select className='options'>
+                  <option value=''></option>
                       <option value='Hubmart Store,Ikeja'>Hubmart Store,Ikeja</option>
                       <option value='Hubmart Store,Lekki'>Hubmart Store,Lekki</option>
                       <option value='Hubmart Store,Ogba'>Hubmart Store,Ogba</option>
@@ -83,13 +85,7 @@ const Billing = (props) => {
                      <p className='create'>Create an account?</p>
                  </div>
 
-                 <div className='password'>
-                     <label >Create Account Password *</label>
-                </div>
-                
-                <div className="account-password-input">
-                    <input type="password" placeholder="password"/>
-                </div>
+               
                 <div className="account-submit-button">
                     <button type='submit'>Next</button>
                 </div>
