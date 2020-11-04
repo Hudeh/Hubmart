@@ -46,6 +46,7 @@
         .login-renderfield-input {
           width: 33vw;
           height: 40px;
+          border: .1rem rgb(211, 208, 208) solid;
           outline: none;
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
@@ -88,14 +89,17 @@
     }
     .signup-customer-input {
       margin-top: 20px;
+      border: .1rem rgb(211, 208, 208) solid;
       margin-left: 20px;
     }
+   
     .signup-customer-note {
       margin-top: -22px;
       margin-left: 25px;
     }
     .signup-vendor-input {
       margin-top: 20px;
+      border: .1rem rgb(211, 208, 208) solid;
       margin-left: 20px;
     }
     .signup-vendor-note {
@@ -139,6 +143,7 @@
         width: 33vw;
         .signin-renderfield-input {
           width: 33vw;
+          border: .1rem rgb(211, 208, 208) solid;
           height: 40px;
           outline: none;
           border-bottom-left-radius: 10px;
@@ -180,7 +185,7 @@
 }
 @media only screen and (max-width: 657px) {
   .layout-container {
-    max-height: 3500px;
+    height: 990px;
     max-width: auto;
     display: block;
     .login-container  {
@@ -198,6 +203,7 @@
         .login-renderfield-input {
           width: 60vw;
           height: 40px;
+          border: .1rem rgb(211, 208, 208) solid;
           outline: none;
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
@@ -232,6 +238,7 @@
           .signin-renderfield-input {
             width: 65vw;
             height: 40px;
+            border: .1rem rgb(211, 208, 208) solid;
             outline: none;
 
             border-bottom-left-radius: 10px;
@@ -250,7 +257,7 @@
 
 @media only screen and (max-width: 657px) {
   .layout-container {
-    max-height: 3500px;
+    height: 990px;
     max-width: auto;
     display: block;
     .login-container  {
@@ -258,7 +265,7 @@
       background-color: whitesmoke;
      width: 650px;
     max-height: 1400px;
-     margin-left: 7px;
+     margin-left: 7px !important;
      .login-renderfield-layout {
       width: 65vw;
       margin: 20px 20px 0 20px;
@@ -270,6 +277,7 @@
           width: 60vw;
           height: 40px;
           outline: none;
+          border: .1rem rgb(211, 208, 208) solid;
           border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -292,7 +300,7 @@
       width: 650px;
       background-color: whitesmoke;
      max-height: 3500px;
-      margin-left: 7px;
+      margin-left: 7px !important;
       .signin-renderfield-layout {
         width: 65vw;
         margin: 20px 20px 0 20px;
@@ -304,6 +312,7 @@
             width: 65vw;
             height: 40px;
             outline: none;
+            border: .1rem rgb(211, 208, 208) solid;
 
             border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
@@ -320,7 +329,7 @@
 }
 @media only screen and (max-width: 764px) {
   .layout-container {
-    max-height: 3500px;
+    height: 990px;
     max-width: auto;
     display: block;
     .login-container  {
@@ -328,7 +337,7 @@
       background-color: whitesmoke;
      width: 650px;
     max-height: 1400px;
-     margin-left: 7px;
+     margin-left: 7px !important;
      .login-renderfield-layout {
       width: 65vw;
       margin: 20px 20px 0 20px;
@@ -338,6 +347,7 @@
         width: 65vw;
         .login-renderfield-input {
           width: 60vw;
+          border: .1rem rgb(211, 208, 208) solid;
           height: 40px;
           outline: none;
           border-bottom-left-radius: 10px;
@@ -362,7 +372,7 @@
       width: 650px;
       background-color: whitesmoke;
      max-height: 3500px;
-      margin-left: 7px;
+      margin-left: 7px !important;
       .signin-renderfield-layout {
         width: 65vw;
         margin: 20px 20px 0 20px;
@@ -377,6 +387,78 @@
             border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
+        border: .1rem rgb(211, 208, 208) solid;
+        border-top-right-radius: 10px;
+          }
+          .signin-renderfield-error {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .layout-container {
+    height: 990px;
+    max-width: auto;
+    display: block;
+    .login-container  {
+      box-sizing: border-box;
+      background-color: whitesmoke;
+     width: 650px;
+    max-height: 1400px;
+     margin-left: 60px;
+     .login-renderfield-layout {
+      width: 65vw;
+      margin: 20px 20px 0 20px;
+  
+
+      .login-renderfield {
+        width: 65vw;
+        .login-renderfield-input {
+          width: 60vw;
+          border: .1rem rgb(211, 208, 208) solid;
+          height: 40px;
+          outline: none;
+          border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+        }
+        .login-renderfield-error {
+          color: red;
+          margin: 15px;
+        }
+      }
+    
+    }
+     
+    }
+    .seprator1,.seprator2,.or {
+      display: none;
+    }
+    .signup-container {
+      box-sizing: border-box;
+      width: 650px;
+      background-color: whitesmoke;
+     max-height: 3500px;
+      margin-left: 60px;
+      .signin-renderfield-layout {
+        width: 65vw;
+        margin: 20px 20px 0 20px;
+        
+  
+        .signin-renderfield {
+          width: 65vw;
+          .signin-renderfield-input {
+            width: 65vw;
+            height: 40px;
+            outline: none;;
+            border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: .1rem rgb(211, 208, 208) solid;
         border-top-right-radius: 10px;
           }
           .signin-renderfield-error {

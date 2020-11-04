@@ -6,26 +6,6 @@ import Login from '../auth/Login'
 import OrderPreview from './OrderPreview'
 import './styles/accountDetails.scss';
 
-// getSteps = () => {
-//   return ['Personal Information','Other Information', 'Room Details', 'Payment Information'];
-// };
-
-// getStepContent = (stepIndex) => {
-//   switch (stepIndex) {
-//     case 0:
-//       return this.getPersonalInformation();
-//     case 1:
-//       return this.getOtherInformation();
-//     case 2:
-//       return this.getRoomDetails();
-//     case 3:
-//       return this.getPaymentInformation();
-
-//     default:
-//       return 'Uknown stepIndex';
-//   }
-// }
-
 class CheckoutForm extends Component {
   constructor(props) {
     super(props)
