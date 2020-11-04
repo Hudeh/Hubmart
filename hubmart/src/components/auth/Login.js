@@ -63,9 +63,6 @@ function LoginForm(props) {
           Login
         </button>
       </form>
-      <button type="submit" className="next">
-          Next
-        </button>
       <p className="text">
         Don't have an account? <Link to="/login-signup">Register</Link>
       </p>
