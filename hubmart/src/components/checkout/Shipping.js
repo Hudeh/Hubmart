@@ -5,46 +5,28 @@ import {reduxForm} from 'redux-form'
 
 
 const Shipping = (props) =>{
-    const {handleSubmit} = props;
+    const {handleSubmit,previousPage} = props;
     return (
         <div> 
         <form onSubmit={handleSubmit}>
-            <div className='labels'>
-                <label>First name *</label>
-                <label id='lastname'>Last name *</label>
-            </div>
-            <div className='account-names-inputs'>
-                <input type='text' />
-                <input type='text' />
-            </div>
+        <h3 className="shipping-header">Shipping Details</h3>
+        <div className="shipping-account">
+          <input type="checkbox" />
+          <p className="shipping">Ship to a different address?</p>
+        </div>
 
-            <div className='label'>
-                <label >Country / Region *</label>
-            </div>
-            <div className='label'>
-                <label >Nigeria</label>
-            </div>
-
-            <div className='label'>
-                <label >Street address*</label>
-            </div>
-            
-            <div className="account-user-input">
-                <input type="text" placeholder="House number and Street name" required />
-            </div>
-            <div className='label'>
-                <label >Town / City *</label>
-            </div>
-            
-            <div className="account-user-input">
-                <input type="text" placeholder="House number and Street name" required />
-            </div>
-            <div className='label'>
-                <label >State / County *</label>
-            </div>
+        <div className="account-ordernote-input">
+          <input
+            type="text"
+            placeholder="Order Notes:Notes about your order e.g. special notes for delivery"
+          />
+        </div>
 
             <div className="account-submit-button">
                 <button type='submit'>Next</button>
+            </div>
+            <div className="account-back-button">
+                <button type='button' onClick={previousPage}>back</button>
             </div>
         </form>
         </div>

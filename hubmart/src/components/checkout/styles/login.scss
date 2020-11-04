@@ -1,0 +1,480 @@
+.layout-container {
+  display: flex;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  max-width: auto;
+  max-height: 200vh;
+  .login-container {
+    .auth-title{
+      font-size: large;
+      text-align: center;
+    }
+    width: 40vw;
+    margin: 40px 20px 0 100px;
+    max-height: 50vh;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: rgba(89, 89, 89, 0.35) 0px 5px 15px 0px;
+    padding: 20px;
+    .login-btn{
+      width: 10vw;
+      height: 30px;
+      float: right;
+      margin: 10px 40px;
+      font-size: medium;
+      background-color: #f15a22;
+      color: white;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+     }
+    .login-renderfield-layout {
+      width: 35vw;
+      margin: 20px 20px 0 20px;
+  
+
+      .login-renderfield {
+        width: 33vw;
+        .login-renderfield-input {
+          width: 33vw;
+          height: 40px;
+          outline: none;
+          border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+        }
+        .login-renderfield-error {
+          color: red;
+          margin: 15px;
+        }
+      }
+    
+    }
+          .renderfield-error {
+            color: red;
+            width: 33vw;
+            font-size: 15px;
+            margin-left: 20px;
+            font-weight: 500;
+          }
+  }
+  .signup-container {
+    .auth-title{
+      font-size: large;
+      text-align: center;
+    }
+    width: 40vw;
+    margin: 40px 80px 0 30px;
+    max-height: 200vh;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: rgba(89, 89, 89, 0.35) 0px 5px 15px 0px;
+    padding: 20px;
+    .welcome-register {
+      font-weight: bold;
+    }
+    .signup-customer-input {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .signup-customer-note {
+      margin-top: -22px;
+      margin-left: 25px;
+    }
+    .signup-vendor-input {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .signup-vendor-note {
+      margin-top: -22px;
+      margin-left: 25px;
+    }
+    .signin-btn{
+      width: 116px;
+      height: 40px;
+      float: left;
+      font-size: medium;
+      margin-top: -10px;
+      background-color: #f15a22;
+      color: white;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .signin-to {
+      margin-top: 80px;
+      font-weight: bold;
+    }
+    .signin-to-input {
+      margin-top: -60px; 
+    }
+    .signin-to1-note {
+      margin-top: -20px;
+      margin-left: 30px;
+      font-weight: 200;
+    }
+    .signin-renderfield-layout {
+      width: 35vw;
+      margin: 20px 20px 0 20px;
+      
+
+      .signin-renderfield {
+        width: 33vw;
+        .signin-renderfield-input {
+          width: 33vw;
+          height: 40px;
+          outline: none;
+          border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+        }
+        .signin-renderfield-error {
+          color: red;
+        }
+      }
+    }
+  }
+  .text{
+     margin: 1rem 0 0 1rem;
+  }
+  .seprator1{
+    border-left: 2px solid #f15a22;
+    height: 80vh;
+    margin-left: 10px;
+    top: 0;
+  }
+  .seprator2{
+    border-left: 2px solid #f15a22;
+    height: 100vh;
+    margin-left: 10px;
+    top: 0;
+  }
+  .or{
+    border-radius: 50%;
+    border: #f15a22 2px solid;
+    width: 40px;
+    margin-left: -10px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    background-color: #ffffff;
+  }
+}
+@media only screen and (max-width: 657px) {
+  .layout-container {
+    max-height: 3500px;
+    max-width: auto;
+    display: block;
+    .login-container  {
+      background-color: whitesmoke;
+     width: 520px;
+    max-height: 1400px;
+     margin-left: 2px;
+     .login-renderfield-layout {
+      width: 65vw;
+      margin: 20px 20px 0 20px;
+  
+
+      .login-renderfield {
+        width: 65vw;
+        .login-renderfield-input {
+          width: 60vw;
+          height: 40px;
+          outline: none;
+          border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+        }
+        .login-renderfield-error {
+          color: red;
+          margin: 15px;
+        }
+      }
+    
+    }
+     
+    }
+    .seprator1,.seprator2,.or {
+      display: none;
+    }
+    .signup-container {
+      box-sizing: border-box;
+      width: 520px;
+      background-color: whitesmoke;
+     max-height: 3500px;
+      margin-left: 2px;
+      .signin-renderfield-layout {
+        width: 65vw;
+        margin: 20px 20px 0 20px;
+        
+  
+        .signin-renderfield {
+          width: 65vw;
+          .signin-renderfield-input {
+            width: 65vw;
+            height: 40px;
+            outline: none;
+
+            border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+          }
+          .signin-renderfield-error {
+            color: red;
+          }
+        }
+      }
+    }
+  } 
+}
+
+@media only screen and (min-width: 657px) {
+  .layout-container {
+    max-height: 3500px;
+    max-width: auto;
+    display: block;
+    .login-container  {
+      box-sizing: border-box;
+      background-color: whitesmoke;
+     width: 650px;
+    max-height: 1400px;
+     margin-left: 7px;
+     .login-renderfield-layout {
+      width: 65vw;
+      margin: 20px 20px 0 20px;
+  
+
+      .login-renderfield {
+        width: 65vw;
+        .login-renderfield-input {
+          width: 60vw;
+          height: 40px;
+          outline: none;
+          border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+        }
+        .login-renderfield-error {
+          color: red;
+          margin: 15px;
+        }
+      }
+    
+    }
+     
+    }
+    .seprator1,.seprator2,.or {
+      display: none;
+    }
+    .signup-container {
+      box-sizing: border-box;
+      width: 650px;
+      background-color: whitesmoke;
+     max-height: 3500px;
+      margin-left: 7px;
+      .signin-renderfield-layout {
+        width: 65vw;
+        margin: 20px 20px 0 20px;
+        
+  
+        .signin-renderfield {
+          width: 65vw;
+          .signin-renderfield-input {
+            width: 65vw;
+            height: 40px;
+            outline: none;
+
+            border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+          }
+          .signin-renderfield-error {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 680px) {
+  .layout-container {
+    max-height: 3500px;
+    max-width: auto;
+    display: block;
+    .login-container  {
+      box-sizing: border-box;
+      background-color: whitesmoke;
+     width: 650px;
+    max-height: 1400px;
+     margin-left: 7px;
+     .login-renderfield-layout {
+      width: 65vw;
+      margin: 20px 20px 0 20px;
+  
+
+      .login-renderfield {
+        width: 65vw;
+        .login-renderfield-input {
+          width: 60vw;
+          height: 40px;
+          outline: none;
+          border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+        }
+        .login-renderfield-error {
+          color: red;
+          margin: 15px;
+        }
+      }
+    
+    }
+     
+    }
+    .seprator1,.seprator2,.or {
+      display: none;
+    }
+    .signup-container {
+      box-sizing: border-box;
+      width: 650px;
+      background-color: whitesmoke;
+     max-height: 3500px;
+      margin-left: 7px;
+      .signin-renderfield-layout {
+        width: 65vw;
+        margin: 20px 20px 0 20px;
+        
+  
+        .signin-renderfield {
+          width: 65vw;
+          .signin-renderfield-input {
+            width: 65vw;
+            height: 40px;
+            outline: none;;
+            border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+          }
+          .signin-renderfield-error {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 850px) {
+  .layout-container {
+    max-height: 300px;
+    max-width: auto;
+    display: flex;
+    .login-container  {
+      box-sizing: border-box;
+  
+      background-color: whitesmoke;
+     width: 45vw;
+    max-height: 1400px;
+     margin-left: 7px;
+     .login-renderfield-layout {
+      width: 20px;
+      margin: 20px 20px 0 20px;
+  
+
+      .login-renderfield {
+        width: 20px;
+        .login-renderfield-input {
+          width:320px;
+    
+          height: 40px;
+          outline: none;
+          border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+        }
+        .login-renderfield-error {
+          color: red;
+          margin: 15px;
+        }
+      }
+     .seprator1{
+    border-left: 2px solid #f15a22;
+    height: 80vh;
+    margin-left: 10px;
+    top: 0;
+  }
+  .seprator2{
+    border-left: 2px solid #f15a22;
+    height: 100vh;
+    margin-left: 10px;
+    top: 0;
+  }
+  .or{
+    border-radius: 50%;
+    border: #f15a22 2px solid;
+    width: 40px;
+    margin-left: -10px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    background-color: #ffffff;
+  }
+    }
+   
+    }
+    .signup-container {
+      box-sizing: border-box;
+      width: 45vw;
+      background-color: whitesmoke;
+
+     max-height: 3500px;
+      margin-left: 7px;
+      .signin-renderfield-layout {
+        width: 65vw;
+        margin: 20px 20px 0 20px;
+        
+  
+        .signin-renderfield {
+          width: 65vw;
+          .signin-renderfield-input {
+            width: 320px;
+            height: 40px;
+      
+            outline: none;;
+            border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+          }
+          .signin-renderfield-error {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
