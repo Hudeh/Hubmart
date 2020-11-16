@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PaymentDetails(props) {
+const PaymentDetails =() =>{
     return (
         <>
             <div className="not-active">
@@ -12,3 +12,4 @@ export default function PaymentDetails(props) {
         </>
     )
 }
+export default PaymentDetails

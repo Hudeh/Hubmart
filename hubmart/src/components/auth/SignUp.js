@@ -7,6 +7,7 @@ import {
   authUserSelector,
   showMessageSelector,
   alertMessageSelector,
+  tokenSelector
 } from "../../reducers/authReducer/selector";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const validate = (values) => {
@@ -40,7 +41,7 @@ const hiddenField = ({ type, meta: { error } }) => {
     </div>
   );
 };
-function SignupForm(props) {
+const SignupForm = (props) => {
   const onSubmit = (formValues) => {
     props.registerUser(formValues);
   };
@@ -130,9 +131,9 @@ const mapStateToProps = (state) => ({
   alertMessage: alertMessageSelector(state),
 });
 
-SignupForm = connect(mapStateToProps, { registerUser })(SignupForm);
+const signupForm = connect(mapStateToProps, { registerUser })(SignupForm);
 
 export default reduxForm({
   form: "SignupForm",
   validate,
-})(SignupForm);
+})(signupForm);

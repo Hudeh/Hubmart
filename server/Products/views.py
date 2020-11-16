@@ -5,11 +5,10 @@ from .models import Product,Orders,Address
 
 class ProductViewSet(viewsets.ModelViewSet):
     """product viewsets"""
-    queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [AllowAny]
 
-    def get_queryset(self, *args, **kwargs):
+    def get_queryset(self):
         return Product.objects.all()
     
 
@@ -17,23 +16,19 @@ class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
     permission_classes = [IsAuthenticated]
 
-    def get_queryset(self, *args, **kwargs):
-        return self.request.user.order.all()
+    def get_queryset(self):
+        return self.request.user.orders.all()
     
 
-    def post(self, serializer, *args, **kwargs):
+    def perform_create(self, serializer):
         return serializer.save(user=self.request.user)
 
 class AddressViewSet(viewsets.ModelViewSet):
     serializer_class = AddressSerializer
     permission_classes = [IsAuthenticated]
 
-    def get_queryset(self, *args, **kwargs):
-        address_type = self.request.get_params.get('address_type', None)
-        qs = Address.objects.all()
-        if address_type is None:
-            return qs
-        return qs.filter(self.request.user, address_type=address_type)
+    def get_queryset(self):
+        return self.request.user.address.all()
 
-    def post(self,serializer, *args, **kwargs):
+    def perform_create(self,serializer):
         return serializer.save(user=self.request.user)

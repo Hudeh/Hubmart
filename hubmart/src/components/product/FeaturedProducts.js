@@ -21,7 +21,7 @@ const FeatureProducts = ({ isLoading, allProducts, addCartItems }) => {
   }, []);
   const ShopProducts = allProducts.map((product) => {
     return (
-      <div className="product_card">
+      <div className="product_card" key={product.id}>
         <div className="product_heading">
           <span className="product_slug">{product.category}</span>
           <Link className="product_links" to={`/products/${product.id}/${product.name}`}>

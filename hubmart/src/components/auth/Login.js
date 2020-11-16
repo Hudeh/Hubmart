@@ -7,6 +7,7 @@ import {
   authUserSelector,
   showMessageSelector,
   alertMessageSelector,
+  tokenSelector
 } from "../../reducers/authReducer/selector";
 import PropTypes from "prop-types";
 
@@ -48,7 +49,7 @@ function LoginForm(props) {
   };
 
   if (props.isAuthenticated) {
-    return <Redirect to="/my-account" />;
+    return <Redirect to='/my-account' />;
   }
   const { pristine, submitting } = props;
 

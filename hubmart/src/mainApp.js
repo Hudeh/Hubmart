@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {connect, useDispatch} from 'react-redux'
-import { Switch, Route, Redirect} from 'react-router-dom';
+import { Switch, Route, withRouter} from 'react-router-dom';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faStar,
@@ -41,7 +41,7 @@ import ViewCartPage from "./components/dashboard/ViewCartPage";
 import PrivateRoute from "./components/main/PrivateRoute";
 import {loadUser} from './actions/auth/actions'
 import CheckoutForm from './components/checkout/CheckOutPage';
-import setAuthToken from './utils/setAuthToken';
+import Index from './components/dashboard/Index';
 
 
 
@@ -71,11 +71,9 @@ library.add(
   faCheck
 );
 
-
-if (localStorage.token) setAuthToken(localStorage.token);
-
-
-
+// const NotFoundPage = () => {
+//   return <h1>404 Page NotFound</h1>;
+// }
 
 const MainApp = () =>{
 
@@ -90,14 +88,16 @@ const MainApp = () =>{
             <Layout>
            <Switch>
              <div id="content">
-               <PrivateRoute exact path="/my-account" component={DashBoard} />
-               <Route exact={true} path="/" component={HomePage} />
+               
+               <PrivateRoute path='/my-account' render={(props)=> <DashBoard {...props} />} />
                <Route path="/products/:id" component={ProductDetail} />
                <Route path="/shop" component={Shop} />
                <Route path="/track-your-order" component={TrackOrders} />
                <Route path="/my-cart" component={ViewCartPage} />
-               <Route path="/check-out" component={CheckoutForm} />
+               <Route path="/checkout" component={CheckoutForm} />
+               {/* <Route component={NotFoundPage}/> */}
                <Route path="/login-signup" component={AuthLayout} />
+               <Route exact={true} path="/" component={HomePage} />
              </div>
            </Switch>
          </Layout>
@@ -105,6 +105,5 @@ const MainApp = () =>{
     }
 
 
-
-export default connect(null,{loadUser})(MainApp);
+export default withRouter(connect(null,{loadUser})(MainApp));
 

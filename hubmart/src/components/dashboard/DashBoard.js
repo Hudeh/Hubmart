@@ -1,29 +1,20 @@
-import React, { useEffect } from 'react'
-import { connect, useDispatch } from 'react-redux'
-import { Link, NavLink, Switch, Route, withRouter } from "react-router-dom";
+import React from "react";
+import { connect } from "react-redux";
+import { NavLink, Switch, Route, withRouter } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles/dashboard.scss";
 import OrderView from "./OrderView";
-import Billing from "./Billing";
-import Shipping from "./Shipping";
 import AccountView from "./AccountView";
 import MyAccount from "./MyAccount";
-import MainApp from "../main/Home";
+import Billing  from "./address/Billing";
+import Shipping  from "./address/Shipping";
 import Download from "./Download";
 import PaymentDetails from "./PaymentDetails";
-import Address from "./Address";
-import { createStructuredSelector } from "reselect";
+import Address from "./address/Address";
 import { logoutUser } from "../../actions/auth/actions";
-import { currentUserSelector } from "../../reducers/authReducer/selector";
-import { fetchOrders } from '../../actions/cart/actions'
-function DashBoard({ match, currentUser, logout, history }) {
-  const dispatch = useDispatch()
-  useEffect(()=>{
-      dispatch(fetchOrders());
-      return () =>{
-          // 
-      }
-  },[])
+
+
+function DashBoard({ match,logout, history }) {
   return (
     <>
       <div className="breadcrumbs">
@@ -56,7 +47,31 @@ function DashBoard({ match, currentUser, logout, history }) {
               <li>
                 <NavLink
                   style={{ textDecoration: "none", color: "#000000" }}
-                  to={`${match.url}/orders`}
+                  to={`${match.path}/billing`}
+                  activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
+                >
+                  Billing
+                  <span style={{ float: "right" }}>
+                    <FontAwesomeIcon icon="shopping-basket" />
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  style={{ textDecoration: "none", color: "#000000" }}
+                  to={`${match.path}/shipping`}
+                  activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
+                >
+                  Shipping
+                  <span style={{ float: "right" }}>
+                    <FontAwesomeIcon icon="shopping-basket" />
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  style={{ textDecoration: "none", color: "#000000" }}
+                  to={`${match.path}/orders`}
                   activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
                 >
                   Orders
@@ -68,7 +83,7 @@ function DashBoard({ match, currentUser, logout, history }) {
               <li>
                 <NavLink
                   style={{ textDecoration: "none", color: "#000000" }}
-                  to={`${match.url}/downloads`}
+                  to={`${match.path}/download`}
                   activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
                 >
                   Downloads
@@ -92,7 +107,7 @@ function DashBoard({ match, currentUser, logout, history }) {
               <li>
                 <NavLink
                   style={{ textDecoration: "none", color: "#000000" }}
-                  to={`${match.url}/payment-method`}
+                  to={`${match.path}/payment-method`}
                   activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
                 >
                   Payment methods
@@ -104,7 +119,7 @@ function DashBoard({ match, currentUser, logout, history }) {
               <li>
                 <NavLink
                   style={{ textDecoration: "none", color: "#000000" }}
-                  to={`${match.url}/account-details`}
+                  to={`${match.path}/account-details`}
                   activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
                 >
                   Account details
@@ -114,52 +129,30 @@ function DashBoard({ match, currentUser, logout, history }) {
                 </NavLink>
               </li>
               <li
-                  onClick={() => {
-                    logout();
-                    history.push("/");
-                  }}
-                >
-                  Logout
-                  <span style={{ float: "right" }}>
-                    <FontAwesomeIcon icon="sign-out-alt" />
-                  </span>
-                
+                onClick={() => {
+                  logout();
+                  history.push("/");
+                }}
+              >
+                Logout
+                <span style={{ float: "right" }}>
+                  <FontAwesomeIcon icon="sign-out-alt" />
+                </span>
               </li>
             </ul>
           </div>
         </div>
         <div className="dashbord-view">
           <Switch>
-            <Route path={`${match.path}/orders`}>
-              <OrderView />
-            </Route>
-            <Route path={`${match.path}/account-details`}>
-              <AccountView />
-            </Route>
-            <Route path={`${match.path}/shipping`}>
-              <Shipping />
-            </Route>
-            <Route path={`${match.path}/downloads`}>
-              <Download />
-            </Route>
-            <Route path={`${match.path}/payment-method`}>
-              <PaymentDetails />
-            </Route>
-            <Route path={`${match.path}/address`}>
-              <Address {...match} />
-            </Route>
-            <Route path={`${match.path}/logout`}>
-              <MainApp />
-            </Route>
-            <Route path={`${match.path}/billing`}>
-              <Billing />
-            </Route>
-            <Route path={`${match.path}/shipping`}>
-              <Shipping />
-            </Route>
-            <Route path={`${match.path}`}>
-              <OrderView  currentUser={currentUser} logout={logout} />
-            </Route>
+            <Route exact path={`${match.path}`} render={(props) => <MyAccount {...props} />} />
+            <Route path={`${match.path}/payment-method`} component={PaymentDetails} />
+            {/* <Route path={`${match.path}/address`} render={(props) => <Address {...props} />} /> */}
+            <Route path={`${match.path}/address`} component={Address} />
+            <Route path={`${match.path}/account-details`} component={AccountView} />
+            <Route path={`${match.path}/orders`} component={OrderView} />
+            <Route path={`${match.path}/download`} component={Download} />
+            <Route path={`${match.path}/shipping`} component={Shipping} />
+            <Route path={`${match.path}/billing`} component={Billing} />
           </Switch>
         </div>
       </div>
@@ -167,12 +160,10 @@ function DashBoard({ match, currentUser, logout, history }) {
   );
 }
 
-const mapStateToProps = createStructuredSelector({
-  currentUser: currentUserSelector,
-});
+
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logoutUser()),
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(DashBoard));
+export default withRouter(connect(null, mapDispatchToProps)(DashBoard));

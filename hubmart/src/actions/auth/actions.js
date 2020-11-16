@@ -9,26 +9,17 @@ import {
   AUTH_ERROR,
   LOGOUT_SUCCESS,
   SHOW_MESSAGE,
+  FETCH_ADDRESS_FAIL, FETCH_ADDRESS_SUCCESS,
+  CREATE_ADDRESS_FAIL,
+  CREATE_ADDRESS_SUCCESS,
+  UPDATE_ADDRESS_FAILS,
+  UPDATE_ADDRESS_SUCCESS
 } from "./types";
 import { stopSubmit } from "redux-form";
+import { tokenConfig } from '../tokenConfig';
 
 
 
-export const tokenConfig = (getState) => {
-  // get token from state
-  const token = getState().authReducer.token;
-
-  // header config
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-  if (token) {
-    config.headers["Authorization"] = `Token ${token}`;
-  }
-  return config;
-};
 
 export const showAuthMessage = (message) => {
   return {
@@ -38,23 +29,14 @@ export const showAuthMessage = (message) => {
 };
 
 
-
-
 // LOAD USER
 export const loadUser = () => async (dispatch,getState) => {
 
   // DISPATCH USER_LOADING
   dispatch({ type: USER_LOADING });
 
-  // SET HEADERS
-  const config = {
-    header: {
-      "Content-Type": "application/json",
-    },
-  };
-
   try {
-    const { data } = await axios.get("/api/auth/user", tokenConfig(getState));
+    const { data } = await axios.get("/api/auth/users", tokenConfig(getState));
 
     // DISPATCH USER_LOADED_SUCCESS
     dispatch({ type: USER_LOADED_SUCCESS, payload: data });
@@ -113,16 +95,9 @@ export const registerUser = ({ email, password }) => async (dispatch) => {
 };
 
 // LOGOUT USER
-export const logoutUser = () => async (dispatch) => {
-  // SET HEADERS
-  const config = {
-    header: {
-      "Content-Type": "application/json",
-    },
-  };
-
+export const logoutUser = () => async (dispatch, getState) => {
   try {
-    const res = await axios.post('/api/auth/logout', null, config);
+    const {res} = await axios.post('/api/auth/logout', null, tokenConfig(getState));
 
     // DISPATCH LOGIN_SUCCESS
     dispatch({ type: LOGOUT_SUCCESS });
@@ -133,3 +108,31 @@ export const logoutUser = () => async (dispatch) => {
     console.log(error);
   }
 };
+
+
+export const saveAddress =  address => async (dispatch,getState )=>{
+  try{
+    const res = await axios.post('/api/address', {...address}, tokenConfig(getState));
+    dispatch({type:CREATE_ADDRESS_SUCCESS, payload:res.data});
+  }catch(error){
+    dispatch({type:CREATE_ADDRESS_FAIL, payload: error.message})
+  }
+}
+
+export const updateAddress = (id, address) => async (dispatch,getState) =>{
+  try {
+    const res = await axios.patch(`/api/address/${id}`, {...address}, tokenConfig(getState))
+    dispatch({type: UPDATE_ADDRESS_SUCCESS,payload:{id, res}})
+  } catch (error) {
+    dispatch({UPDATE_ADDRESS_FAILS})
+  }
+}
+
+export const fetchAddressBook = () => async (dispatch, getState) =>{
+  try {
+    const res = await axios.get('/api/address', tokenConfig(getState));
+    dispatch({type: FETCH_ADDRESS_SUCCESS, payload: res.data})
+  } catch (error) {
+    dispatch({type:FETCH_ADDRESS_FAIL, payload: error.message})
+  }
+}

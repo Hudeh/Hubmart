@@ -9,7 +9,6 @@ import { removeCartItems, addCartItems, reduceCartItem } from "../../actions/car
 import { fetchSingleProduct } from "../../actions/products/actions";
 import { singleProductSelector } from "../../reducers/productReducer/selector";
 import { authUserSelector } from "../../reducers/authReducer/selector";
-import cake from "../../assets/images/cake.jpg";
 import { formatter } from "../../utils/currencyFormater";
 import { createStructuredSelector } from "reselect";
 
@@ -122,7 +121,7 @@ const ProductDetails = (props) => {
           </div>
         </div>
       ) : null}
-      {/* <RelatedProducts /> */}
+      <RelatedProducts />
     </>
   );
 };

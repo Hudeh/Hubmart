@@ -59,7 +59,7 @@ ADDRESS_CHOICES = (
 
 class Address(SafeDeleteModel):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                             on_delete=models.CASCADE)
+                             on_delete=models.CASCADE,null=True, related_name='address')
     street_address = models.CharField(max_length=100)
     apartment_address = models.CharField(max_length=100)
     country = CountryField(multiple=False)
@@ -71,7 +71,7 @@ class Address(SafeDeleteModel):
     original_objects = SafeDeleteAllManager()
 
     def __str__(self):
-        return self.user.username
+        return str(self.user)
 
     class Meta:
         verbose_name_plural = 'Addresses'

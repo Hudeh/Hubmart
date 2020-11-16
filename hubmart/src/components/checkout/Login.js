@@ -48,9 +48,9 @@ function LoginForm(props) {
   };
 
   if (props.isAuthenticated) {
-    return <Redirect to="/my-account" />;
+    return <Redirect to="/checkout" />;
   }
-  const { pristine, submitting, error } = props;
+  const { pristine, submitting} = props;
 
   return (
     <div className="login-container">
@@ -63,9 +63,6 @@ function LoginForm(props) {
           Login
         </button>
       </form>
-      <button type="submit" className="next">
-          Next
-        </button>
       <p className="text">
         Don't have an account? <Link to="/login-signup">Register</Link>
       </p>

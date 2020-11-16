@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const PrivateRoute = ({
-  component: Component,
+  render: Component,
   auth: { 
     isLoading,
     isAuthenticated
@@ -17,7 +17,10 @@ const PrivateRoute = ({
         if (isLoading) {
           return <div>Loading....</div>
         } else if (!isAuthenticated) {
-          return <Redirect to='/login-signup' />
+          return <Redirect to={{
+            pathname: '/login-signup',
+            state: {from: props.location}
+          }} />;
         } else {
           return <Component {...props} />
         }

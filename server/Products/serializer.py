@@ -28,5 +28,6 @@ class AddressSerializer(serializers.ModelSerializer):
             'country',
             'zip',
             'address_type',
-            'default'
+            'default',
+            'phone'
         )

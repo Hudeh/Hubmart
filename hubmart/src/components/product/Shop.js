@@ -179,7 +179,7 @@ return () =>({
           </div>
           {
             isLoading ? 
-            (<img className="shop_img_loader" src={loader} />)
+            (<img className="shop_img_loader" src={loader} alt="loading" />)
             :
            (
              <>

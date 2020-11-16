@@ -35,7 +35,7 @@ const CartDropDown = ({ cartItems, removeCartItems,toggleCartHidden, history }) 
           <button
             className="checkout"
             onClick={() => {
-               history.push("/check-out");
+               history.push("/checkout");
               toggleCartHidden();
             }}
           >

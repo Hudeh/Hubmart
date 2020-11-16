@@ -3,14 +3,14 @@ import { Link, withRouter } from "react-router-dom";
 import {connect} from 'react-redux'
 import { logoutUser } from "../../actions/auth/actions";
 
- function MyAccount({currentUser,history, logoutUser}) {
+ function MyAccount() {
   return (
     <>
     <div>
       <p
         style={{ textDecoration: "none", color: "#00aeff",cursor:'pointer' }}
           >
-          Hello {currentUser.user.username} 
+          Hello 
       </p>
       <p>
         From your account dashboard you can view your{" "}

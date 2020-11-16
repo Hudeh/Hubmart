@@ -5,6 +5,7 @@ import {
     FETCH_SINGLE_PRODUCT_DETAILS_SUCCESS,
     FETCH_SINGLE_PRODUCT_DETAILS,
     FETCH_SINGLE_PRODUCT_DETAILS_FAILS,
+    CREATE_ADDRESS_FAIL,CREATE_ADDRESS_SUCCESS,LOAD_ADDRESS, FETCH_ADDRESS_SUCCESS, FETCH_ADDRESS_FAIL
   } from "../../actions/products/types";
   
   
@@ -12,7 +13,8 @@ import {
     allProduct: [],
     isLoading: false,
     singleProduct: {},
-    errors: {}
+    errors: {},
+    address:[]
   };
   
   
