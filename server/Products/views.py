@@ -13,6 +13,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     
 
 class OrderViewSet(viewsets.ModelViewSet):
+    """Order viewsets"""
     serializer_class = OrderSerializer
     permission_classes = [IsAuthenticated]
 
@@ -24,6 +25,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         return serializer.save(user=self.request.user)
 
 class AddressViewSet(viewsets.ModelViewSet):
+    """Address viewsets"""
     serializer_class = AddressSerializer
     permission_classes = [IsAuthenticated]
 

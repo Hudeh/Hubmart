@@ -24,14 +24,23 @@ useEffect(() => {
           <div className="address-billing">
             <h4 style={{ borderBottom: ".1rem solid #F15A22" }}>
               Billing Address
-              <span style={{ float: "right", paddingRight: "25px" }}>
+              {billing_address ?<span style={{ float: "right", paddingRight: "25px" }}>
                 <Link
                   style={{ textDecoration: "none", color: "#F15A22" }}
                   to={`${match.path}/billing`}
                 >
-                  Add
+                  Edit
                 </Link>
-              </span>
+              </span>:
+              <span style={{ float: "right", paddingRight: "25px" }}>
+              <Link
+                style={{ textDecoration: "none", color: "#F15A22" }}
+                to={`${match.path}/billing`}
+              >
+                Add
+              </Link>
+            </span>
+              }
             </h4>
             {billing_address.length  ? (billing_address.map(add => {
               return <div key={add.id}>
@@ -45,14 +54,23 @@ useEffect(() => {
           <div className="address-shipping">
             <h4 style={{ borderBottom: ".1rem solid #F15A22" }}>
               Shipping Address
-              <span style={{ float: "right", paddingRight: "25px" }}>
+              {shipping_address ?<span style={{ float: "right", paddingRight: "25px" }}>
                 <Link
                   style={{ textDecoration: "none", color: "#F15A22" }}
-                  to={`${match.path}/shipping`}
+                  to={`${match.path}/billing`}
                 >
-                  Add
+                  Edit
                 </Link>
-              </span>
+              </span>:
+              <span style={{ float: "right", paddingRight: "25px" }}>
+              <Link
+                style={{ textDecoration: "none", color: "#F15A22" }}
+                to={`${match.path}/billing`}
+              >
+                Add
+              </Link>
+            </span>
+              }
             </h4>
             { shipping_address.length ? <div>Your Shipping Address Here</div> :
               <p>You have not set up this type of address yet.</p>}

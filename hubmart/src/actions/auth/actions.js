@@ -17,7 +17,7 @@ import {
 } from "./types";
 import { stopSubmit } from "redux-form";
 import { tokenConfig } from '../tokenConfig';
-
+import {reset} from 'redux-form';
 
 
 
@@ -114,6 +114,8 @@ export const saveAddress =  address => async (dispatch,getState )=>{
   try{
     const res = await axios.post('/api/address', {...address}, tokenConfig(getState));
     dispatch({type:CREATE_ADDRESS_SUCCESS, payload:res.data});
+    dispatch(reset('billing'));
+    
   }catch(error){
     dispatch({type:CREATE_ADDRESS_FAIL, payload: error.message})
   }

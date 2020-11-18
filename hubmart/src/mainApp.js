@@ -41,7 +41,6 @@ import ViewCartPage from "./components/dashboard/ViewCartPage";
 import PrivateRoute from "./components/main/PrivateRoute";
 import {loadUser} from './actions/auth/actions'
 import CheckoutForm from './components/checkout/CheckOutPage';
-import Index from './components/dashboard/Index';
 
 
 

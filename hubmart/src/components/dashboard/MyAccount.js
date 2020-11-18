@@ -3,15 +3,15 @@ import { Link, withRouter } from "react-router-dom";
 import {connect} from 'react-redux'
 import { logoutUser } from "../../actions/auth/actions";
 
- function MyAccount() {
+ function MyAccount({currentUser}) {
   return (
     <>
     <div>
-      <p
+      {currentUser && <p
         style={{ textDecoration: "none", color: "#00aeff",cursor:'pointer' }}
           >
-          Hello 
-      </p>
+          Hello {currentUser.user.email}
+      </p>}
       <p>
         From your account dashboard you can view your{" "}
         <Link to='/'style={{ textDecoration: "none", color: "#00aeff" }}>recent order, </Link> manage

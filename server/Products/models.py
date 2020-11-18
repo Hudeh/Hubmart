@@ -6,6 +6,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 class Product(SafeDeleteModel):
+    """Product Model"""
     _safedelete_policy = SOFT_DELETE_CASCADE
 
     name = models.CharField(max_length=255)
@@ -29,6 +30,7 @@ class Product(SafeDeleteModel):
 
 
 class Orders(SafeDeleteModel):
+    """Order Model"""
     _safedelete_policy = SOFT_DELETE_CASCADE
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
@@ -58,10 +60,13 @@ ADDRESS_CHOICES = (
 )
 
 class Address(SafeDeleteModel):
+    """Address Model"""
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              on_delete=models.CASCADE,null=True, related_name='address')
     street_address = models.CharField(max_length=100)
-    apartment_address = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=100,blank=True, null=True)
+    last_name = models.CharField(max_length=100,blank=True, null=True)
+    city_name = models.CharField(max_length=100)
     country = CountryField(multiple=False)
     phone = models.CharField(max_length=15, blank=True, null=True)
     zip = models.CharField(max_length=100)

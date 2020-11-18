@@ -5,9 +5,7 @@ import { Field, reduxForm } from "redux-form";
 import { createStructuredSelector } from "reselect";
 import { addressSelector } from "../../../reducers/authReducer/selector";
 
-const Billing = ({ saveAddress, handleSubmit,address }) => {
-  const {street_address,apartment_address,country,phone,zip,address_type} = address;
-  console.log(street_address)
+const Billing = ({ saveAddress, handleSubmit,address, history}) => {
   const renderField = ({ input, label, type, meta: { touched, error } }) => {
     return (
       <div>
@@ -28,15 +26,18 @@ const Billing = ({ saveAddress, handleSubmit,address }) => {
       </div>
     );
   };
-const defaultIfEmpty = value => {
-  return value === "" ? "" : value;
+
+  const onSubmit = (address) => {
+    saveAddress(address);
+    // history.push('/address')
 };
-  const onSubmit = (address) => [saveAddress(address)];
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Field name="street_address" type="text" component={renderField} label="street"/>
-        <Field name="apartment_address" type="text" component={renderField} label="apartment" />
+        <Field name="first_name" type="text" component={renderField} label="First Name"/>
+        <Field name="last_name" type="text" component={renderField} label="Last Name"/>
+        <Field name="street_address" type="text" component={renderField} label="Street Address"/>
+        <Field name="city_name" type="text" component={renderField} label="Town/City" />
         <Field name="country" type="text" component={renderField} label="country" />
         <Field name="phone" type="text" component={renderField} label="phone" />
         <Field name="zip" type="text" component={renderField} label="zip" />

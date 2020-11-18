@@ -7,7 +7,6 @@ import OrderView from "./OrderView";
 import AccountView from "./AccountView";
 import MyAccount from "./MyAccount";
 import Billing  from "./address/Billing";
-import Shipping  from "./address/Shipping";
 import Download from "./Download";
 import PaymentDetails from "./PaymentDetails";
 import Address from "./address/Address";
@@ -41,30 +40,6 @@ function DashBoard({ match,logout, history }) {
                   Dashboard
                   <span style={{ float: "right" }}>
                     <FontAwesomeIcon icon="tachometer-alt" />
-                  </span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  style={{ textDecoration: "none", color: "#000000" }}
-                  to={`${match.path}/billing`}
-                  activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
-                >
-                  Billing
-                  <span style={{ float: "right" }}>
-                    <FontAwesomeIcon icon="shopping-basket" />
-                  </span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  style={{ textDecoration: "none", color: "#000000" }}
-                  to={`${match.path}/shipping`}
-                  activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
-                >
-                  Shipping
-                  <span style={{ float: "right" }}>
-                    <FontAwesomeIcon icon="shopping-basket" />
                   </span>
                 </NavLink>
               </li>
@@ -146,13 +121,11 @@ function DashBoard({ match,logout, history }) {
           <Switch>
             <Route exact path={`${match.path}`} render={(props) => <MyAccount {...props} />} />
             <Route path={`${match.path}/payment-method`} component={PaymentDetails} />
-            {/* <Route path={`${match.path}/address`} render={(props) => <Address {...props} />} /> */}
+            <Route path={`${match.path}/address/:id`} render={(props) => <Billing {...props} />} />
             <Route path={`${match.path}/address`} component={Address} />
             <Route path={`${match.path}/account-details`} component={AccountView} />
             <Route path={`${match.path}/orders`} component={OrderView} />
             <Route path={`${match.path}/download`} component={Download} />
-            <Route path={`${match.path}/shipping`} component={Shipping} />
-            <Route path={`${match.path}/billing`} component={Billing} />
           </Switch>
         </div>
       </div>
