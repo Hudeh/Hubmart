@@ -31,13 +31,15 @@
              width: 33vw;
   }
              .login-renderfield-input {
-               width: 33vw;
-               height: 40px;
+               width: 470px;
+               background-color: #efecef;
+               height: 43px;
                outline: none;
-               border-bottom-left-radius: 10px;
-           border-top-left-radius: 10px;
-           border-bottom-right-radius: 10px;
-           border-top-right-radius: 10px;
+               border:1px solid#dddd;
+               border-bottom-left-radius:20px;
+           border-top-left-radius: 20px;
+           border-bottom-right-radius: 20px;
+           border-top-right-radius: 20px;
             }
             .container {
               display: flex;
@@ -51,7 +53,6 @@
             margin-left: -1000px;
           }
                 .checkbox {
-
                   margin-top: -4px;
                   width: 500px;
                   margin-left: 5px;
