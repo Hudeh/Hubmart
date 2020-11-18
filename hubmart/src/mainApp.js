@@ -93,6 +93,7 @@ const MainApp = () =>{
                <Route path="/shop" component={Shop} />
                <Route path="/track-your-order" component={TrackOrders} />
                <Route path="/my-cart" component={ViewCartPage} />
+               {/* <Route path="/checkout" component={CheckoutForm} /> */}
                <Route path="/checkout" component={CheckoutForm} />
                {/* <Route component={NotFoundPage}/> */}
                <Route path="/login-signup" component={AuthLayout} />

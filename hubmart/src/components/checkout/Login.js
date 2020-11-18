@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import { loginUser } from "../../actions/auth/actions";
+import "./styles/checkout-login.scss"
 import {
   authUserSelector,
   showMessageSelector,
@@ -54,18 +55,32 @@ function LoginForm(props) {
 
   return (
     <div className="login-container">
-      <p className="auth-title">Login</p>
+      <p className="auth-title">Welcome back! Sign in to your account.</p>
+      <p className="auth-signin-writeup">If you have shopped with us before, please enter your details in the boxes below.
+       If you are a new customer,
+       please proceed to the Billing &  <br/>Shipping section.</p>
       <form onSubmit={props.handleSubmit(onSubmit)} className="login-form">
+          <div className="container">
         <Field name="email" type="email" component={renderField} label="Email" />
         <Field name="password" type="password" component={renderField} label="Password" />
         <Field name="non_field_errors" type="hidden" component={hiddenField} />
+       <div className='checkout'>
+        <input type='checkbox'/>
+        <p className='checkbox'>Remember me</p>
+        <p className='password-reset'>Lost your password?</p>
         <button className="login-btn" disabled={pristine || submitting}>
           Login
         </button>
+        <button className='back-btn'>
+          Back to Cart
+        </button>
+        <button className='skip-btn'>
+          Skip Login
+        </button>
+        </div>
+        </div>
       </form>
-      <p className="text">
-        Don't have an account? <Link to="/login-signup">Register</Link>
-      </p>
+      
     </div>
   );
 }
@@ -79,10 +94,9 @@ const mapStateToProps = (state) => ({
   alertMessage: alertMessageSelector(state),
 });
 
-LoginForm = connect(mapStateToProps, { loginUser })(LoginForm);
+const loginForm = connect(mapStateToProps, { loginUser })(LoginForm);
 
 export default reduxForm({
   form: "loginForm",
   validate
-})(LoginForm);
-
+})(loginForm);
