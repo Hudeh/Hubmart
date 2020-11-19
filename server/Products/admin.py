@@ -4,9 +4,9 @@ from safedelete.admin import SafeDeleteAdmin, highlight_deleted
 
 
 class ProductAdmin(SafeDeleteAdmin):
-    list_display = (highlight_deleted,  "image", "name", "price", "stock_count", "in_stock",
+    list_display = (highlight_deleted,  "image", "item", "price", "stock_count", "in_stock",
                     "category", "purchase_date", "expire_date") + SafeDeleteAdmin.list_display
-    list_filter = ("name", "category") + SafeDeleteAdmin.list_filter
+    list_filter = ("item", "category") + SafeDeleteAdmin.list_filter
 
 
 admin.site.register(Product, ProductAdmin)
@@ -14,7 +14,7 @@ admin.site.register(Product, ProductAdmin)
 
 
 class OrdersAdmin(SafeDeleteAdmin):
-    list_display = (highlight_deleted, 'ordered','user') + SafeDeleteAdmin.list_display
+    list_display = (highlight_deleted, 'order','quantity','user','ordered','ordered_date') + SafeDeleteAdmin.list_display
     list_filter = ('order',) + SafeDeleteAdmin.list_filter
 
 admin.site.register(Orders, OrdersAdmin)

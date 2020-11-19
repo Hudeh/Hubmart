@@ -9,7 +9,7 @@ class Product(SafeDeleteModel):
     """Product Model"""
     _safedelete_policy = SOFT_DELETE_CASCADE
 
-    name = models.CharField(max_length=255)
+    item = models.CharField(max_length=255)
     image = models.ImageField(
         upload_to='product/images/uploads_date/%Y/%m/%d/')
     price = models.DecimalField(max_digits=12, decimal_places=2)
@@ -22,7 +22,7 @@ class Product(SafeDeleteModel):
     current_update = models.DateField(auto_now=True, blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        return self.item
 
     original_objects = SafeDeleteAllManager()
 
@@ -34,7 +34,7 @@ class Orders(SafeDeleteModel):
     _safedelete_policy = SOFT_DELETE_CASCADE
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                             on_delete=models.CASCADE,related_name="orders")
+                             on_delete=models.CASCADE,related_name="orders",null=True)
     order = models.CharField(max_length=255,blank=True, null=True)
     quantity= models.CharField(max_length=255,blank=True, null=True)
     ordered = models.BooleanField(default=False)

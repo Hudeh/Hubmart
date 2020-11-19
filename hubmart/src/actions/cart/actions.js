@@ -40,10 +40,10 @@ export const subCount = () => {
   return { type: SUB_MORE_BUTTON };
 };
 
-export const placeOrder = order => async (dispatch,getState) => {
+export const placeOrder = (order) => async (dispatch,getState) => {
 
   try {
-    const { data } = await axios.post("/api/orders", {...order}, tokenConfig(getState));
+    const { data } = await axios.post("/api/orders", order, tokenConfig(getState));
     dispatch({ type: PLACE_ORDERS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: PLACE_ORDER_FAILS})

@@ -7,14 +7,14 @@ from UserProfile.UserSerializers import UserSerializer
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model =Product
-        fields = ('id','name', 'image', 'price', 'in_stock', 'category')
+        fields = ('id','item', 'image', 'price', 'in_stock', 'category')
 
 
 class OrderSerializer(serializers.ModelSerializer):
-    # user = serializers.ReadOnlyField(source='user.username')
+    user = serializers.SlugRelatedField(slug_field='email',read_only=True)
     class Meta:
         model = Orders
-        fields = ('user','order','quantity')
+        fields = ('id','user','order','quantity','ordered')
 
 class AddressSerializer(serializers.ModelSerializer):
     country = CountryField()

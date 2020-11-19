@@ -7,6 +7,8 @@ import Login from "./Login";
 import OrderPreview from "./OrderPreview";
 import "./styles/accountDetails.scss";
 import { currentUserSelector } from "../../reducers/authReducer/selector";
+import { placeOrder } from "../../actions/cart/actions";
+import { selectCart } from "../../reducers/cartReducer/selector";
 import { createStructuredSelector } from "reselect";
 class CheckoutForm extends Component {
   constructor(props) {
@@ -26,7 +28,8 @@ class CheckoutForm extends Component {
   }
 
   render() {
-    const { onSubmit, currentUser } = this.props;
+    const {currentUser,cartItems } = this.props;
+    const cartItem = cartItems.map(cart => {return <OrderPreview key={cart.id} cart={cart} />})
     const { page } = this.state;
     return (
       <div>
@@ -34,14 +37,14 @@ class CheckoutForm extends Component {
           <div>
             {page === 1 && <Billing onSubmit={this.nextPage} />}
             {page === 2 && <Shipping previousPage={this.previousPage} onSubmit={this.nextPage} />}
-            {page === 3 && <OrderPreview previousPage={this.previousPage} onSubmit={onSubmit} />}
+            {page === 3 && cartItem }
           </div>
         ) : (
           <div>
             {page === 1 && <Login onSubmit={this.nextPage} />}
             {page === 2 && <Billing onSubmit={this.nextPage} previousPage={this.previousPage} />}
             {page === 3 && <Shipping previousPage={this.previousPage} onSubmit={this.nextPage} />}
-            {page === 4 && <OrderPreview previousPage={this.previousPage} onSubmit={onSubmit} />}
+            {page === 4 && cartItem}
           </div>
         )}
       </div>
@@ -49,12 +52,13 @@ class CheckoutForm extends Component {
   }
 }
 
-CheckoutForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
+// CheckoutForm.propTypes = {
+//   onSubmit: PropTypes.func.isRequired,
+// };
 
 const mapStateToProps = createStructuredSelector({
   currentUser: currentUserSelector,
+  cartItems : selectCart
 });
 
-export default connect(mapStateToProps)(CheckoutForm);
+export default connect(mapStateToProps,{placeOrder})(CheckoutForm);

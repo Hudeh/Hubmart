@@ -1,117 +1,117 @@
-.login-container {
-  .auth-title{
-           font-size: large;
-           font-weight: 500;
-          margin-left: 180px;
-          margin-top: 200px;
-          margin-bottom: -100px;
-  
-        }
-        .auth-signin-writeup{
-          font-size: large;
-          font-weight: 500;
-          margin-top: 120px;
-         margin-left: 180px;
-         margin-bottom: -100px;
- 
-       }
+.check-login-container {
+  .auth-title {
+    font-size: large;
+    font-weight: 500;
+    margin-left: 180px;
+    margin-top: 200px;
+    margin-bottom: -100px;
+  }
+  .auth-signin-writeup {
+    font-size: large;
+    font-weight: 500;
+    margin-top: 120px;
+    margin-left: 180px;
+    margin-bottom: -100px;
+  }
   display: block;
   padding: 10px;
   margin: 10px 0 0 0;
   max-width: auto;
   height: 800px;
-  .login-renderfield-layout {
+  .renderfield-layout {
     width: 35vw;
     margin: 150px -30px 0 80px;
     height: 400px;
     width: 1000px;
   }
 
-  .login-renderfield {
-             width: 33vw;
+  .renderfield {
+    width: 33vw;
   }
-             .login-renderfield-input {
-               width: 470px;
-               background-color: #efecef;
-               height: 43px;
-               outline: none;
-               border:1px solid#dddd;
-               border-bottom-left-radius:20px;
-           border-top-left-radius: 20px;
-           border-bottom-right-radius: 20px;
-           border-top-right-radius: 20px;
-            }
-            .container {
-              display: flex;
-              margin-left: 100px;
-            }
-            .checkout {
-              display: flex;
-              margin-top: 250px;
-            }
-          .checkout input {
-            margin-left: -1000px;
-          }
-                .checkbox {
-                  margin-top: -4px;
-                  width: 500px;
-                  margin-left: 5px;
-                  font-weight: 500;
-                }
-                .login-btn {
-                  margin-top: 50px;
-                 margin-left: -160px;
-                  width: 97px;
-                   height: 47px;
-                   font-size: medium;
-                  color: black;
-                  background-color: #efecef;
-                  outline: none;
-                  cursor: pointer;
-                  border: none;
-                  border-bottom-left-radius: 20px;
-                  border-top-left-radius: 20px;
-                  border-bottom-right-radius: 20px;
-                  border-top-right-radius: 20px;
-                }
-                .login-btn:hover, .back-btn:hover, .skip-btn:hover {
-                  background-color: black;
-                  color: white;
-                }
-                .password-reset {
-                  color: #014cac;
-                  font-weight: 500;
-                  margin-top: 120px;
-                  margin-left: -520px;
-                }
-              
-                .back-btn {
-                  width: 139px;
-                  height: 47px;
-                  margin-top: 250px;
-                  outline: none;
-                  border: none;
-                  cursor: pointer;
-                  border-bottom-left-radius: 20px;
-                  border-top-left-radius: 20px;
-                  border-bottom-right-radius: 20px;
-                  border-top-right-radius: 20px;
-                }
-                .skip-btn {
-                  width:139px;
-                  height: 47px;
-                  margin-top: 250px;
-                  margin-left: 500px;
-                  outline: none;
-                  cursor: pointer;
-                  border: none;
-                  border-bottom-left-radius: 20px;
-                  border-top-left-radius: 20px;
-                  border-bottom-right-radius: 20px;
-                  border-top-right-radius: 20px;
-                }
+  .renderfield-input {
+    width: 470px;
+    background-color: #efecef;
+    height: 43px;
+    outline: none;
+    border: 1px solid#dddd;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .checkout-container{
+    display: flex;
+    margin-left: 100px;
+  }
+  .checkout-page {
+    display: flex;
+    margin-top: 250px;
+  }
+  .checkout-page input {
+    margin-left: -1000px;
+  }
+  .check-box {
+    margin-top: -4px;
+    width: 500px;
+    margin-left: 5px;
+    font-weight: 500;
+  }
+  .btn-btn {
+    margin-top: 50px;
+    margin-left: -160px;
+    width: 97px;
+    height: 47px;
+    font-size: medium;
+    color: black;
+    background-color: #efecef;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .btn-btn:hover,
+  .back-btn:hover,
+  .skip-btn:hover {
+    background-color: black;
+    color: white;
+  }
+  .password-reset {
+    color: #014cac;
+    font-weight: 500;
+    margin-top: 120px;
+    margin-left: -520px;
+  }
+
+  .back-btn {
+    width: 139px;
+    height: 47px;
+    margin-top: 250px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .skip-btn {
+    width: 139px;
+    height: 47px;
+    margin-top: 250px;
+    margin-left: 500px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
-//   .login-container {
+//   .container {
 //     .auth-title{
 //       font-size: large;
 //       text-align: center;
@@ -146,7 +146,6 @@
 //     .login-renderfield-layout {
 //       width: 35vw;
 //       margin: 20px 20px 0 20px;
-  
 
 //       .login-renderfield {
 //         width: 33vw;
@@ -164,7 +163,7 @@
 //           margin: 15px;
 //         }
 //       }
-    
+
 //     }
 //           .renderfield-error {
 //             color: red;
@@ -230,7 +229,7 @@
 //       font-weight: bold;
 //     }
 //     .signin-to-input {
-//       margin-top: -60px; 
+//       margin-top: -60px;
 //     }
 //     .signin-to1-note {
 //       margin-top: -20px;
@@ -240,7 +239,6 @@
 //     .signin-renderfield-layout {
 //       width: 35vw;
 //       margin: 20px 20px 0 20px;
-      
 
 //       .signin-renderfield {
 //         width: 33vw;
@@ -298,7 +296,6 @@
 //      .login-renderfield-layout {
 //       width: 65vw;
 //       margin: 20px 20px 0 20px;
-  
 
 //       .login-renderfield {
 //         width: 65vw;
@@ -316,9 +313,9 @@
 //           margin: 15px;
 //         }
 //       }
-    
+
 //     }
-     
+
 //     }
 //     .seprator1,.seprator2,.or {
 //       display: none;
@@ -332,8 +329,7 @@
 //       .signin-renderfield-layout {
 //         width: 65vw;
 //         margin: 20px 20px 0 20px;
-        
-  
+
 //         .signin-renderfield {
 //           width: 65vw;
 //           .signin-renderfield-input {
@@ -352,7 +348,7 @@
 //         }
 //       }
 //     }
-//   } 
+//   }
 // }
 
 // @media only screen and (min-width: 657px) {
@@ -369,7 +365,6 @@
 //      .login-renderfield-layout {
 //       width: 65vw;
 //       margin: 20px 20px 0 20px;
-  
 
 //       .login-renderfield {
 //         width: 65vw;
@@ -387,9 +382,9 @@
 //           margin: 15px;
 //         }
 //       }
-    
+
 //     }
-     
+
 //     }
 //     .seprator1,.seprator2,.or {
 //       display: none;
@@ -403,8 +398,7 @@
 //       .signin-renderfield-layout {
 //         width: 65vw;
 //         margin: 20px 20px 0 20px;
-        
-  
+
 //         .signin-renderfield {
 //           width: 65vw;
 //           .signin-renderfield-input {
@@ -439,7 +433,6 @@
 //      .login-renderfield-layout {
 //       width: 65vw;
 //       margin: 20px 20px 0 20px;
-  
 
 //       .login-renderfield {
 //         width: 65vw;
@@ -457,9 +450,9 @@
 //           margin: 15px;
 //         }
 //       }
-    
+
 //     }
-     
+
 //     }
 //     .seprator1,.seprator2,.or {
 //       display: none;
@@ -473,8 +466,7 @@
 //       .signin-renderfield-layout {
 //         width: 65vw;
 //         margin: 20px 20px 0 20px;
-        
-  
+
 //         .signin-renderfield {
 //           width: 65vw;
 //           .signin-renderfield-input {
@@ -501,7 +493,7 @@
 //     display: flex;
 //     .login-container  {
 //       box-sizing: border-box;
-  
+
 //       background-color: whitesmoke;
 //      width: 45vw;
 //     max-height: 1400px;
@@ -509,13 +501,12 @@
 //      .login-renderfield-layout {
 //       width: 20px;
 //       margin: 20px 20px 0 20px;
-  
 
 //       .login-renderfield {
 //         width: 20px;
 //         .login-renderfield-input {
 //           width:320px;
-    
+
 //           height: 40px;
 //           outline: none;
 //           border-bottom-left-radius: 10px;
@@ -551,7 +542,7 @@
 //     background-color: #ffffff;
 //   }
 //     }
-   
+
 //     }
 //     .signup-container {
 //       box-sizing: border-box;
@@ -563,14 +554,13 @@
 //       .signin-renderfield-layout {
 //         width: 65vw;
 //         margin: 20px 20px 0 20px;
-        
-  
+
 //         .signin-renderfield {
 //           width: 65vw;
 //           .signin-renderfield-input {
 //             width: 320px;
 //             height: 40px;
-      
+
 //             outline: none;;
 //             border-bottom-left-radius: 10px;
 //         border-top-left-radius: 10px;
