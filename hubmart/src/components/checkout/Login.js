@@ -75,7 +75,7 @@ function LoginForm(props) {
           Back to Cart
         </button>
         <button className='skip-btn'>
-          Skip Login
+          Skip Login to Checkout
         </button>
         </div>
         </div>
