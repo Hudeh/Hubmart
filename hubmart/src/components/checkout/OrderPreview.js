@@ -114,12 +114,14 @@ const OrderPreview = ({ cart, placeOrder }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(item, unit)
+    e.persist()
+    alert(setItem, setUnit)
     const formValues = {
-      item,unit, ordered
+      setItem,setUnit, ordered
     }
     placeOrder(formValues)
   };
+ 
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -127,16 +129,14 @@ const OrderPreview = ({ cart, placeOrder }) => {
           type="text"
           name="order"
           className="order-right-details"
-          value={item}
-          onChange={(e) => setItem({[e.target.name]: e.target.value})}
+          onChange={(e)=> setItem({ [e.target.name]: e.target.value })}
         />{" "}
         <br />
         <input
           type="text"
           name="quantity"
           className="order-right-details1"
-          value={unit}
-          onChange={(e) => setUnit({[e.target.name]: e.target.value})}
+          onChange={(e)=> setUnit({ [e.target.name]: e.target.value })}
         />{" "}
         <br />
         <input
