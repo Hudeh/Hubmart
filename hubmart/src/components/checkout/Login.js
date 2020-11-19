@@ -57,10 +57,20 @@ function LoginForm(props) {
 
   return (
     <div className="checkout-container">
+      <p className='checkout-title'>Checkout</p>
       <div className="checkout-scroll">
-        <div className="first-scroll">36</div>
-          <p className="second-scroll">1</p>
-        <div className="third-scroll">66</div>
+      <div className="inflow-scroll"></div>
+        <div className="first-scroll">
+        <p className="first-scroll-writeup">1</p>
+        </div>
+          <p className="second-scroll">2</p>
+        <div className="third-scroll">
+        <p className="third-scroll-writeup">3</p>
+        </div>
+        <div className="fourth-scroll">
+        <p className="fourth-scroll-writeup">4</p>
+        </div>
+        <div className="outflow-scroll"></div>
       </div>
       <p className="auth-title">Welcome back! Sign in to your account.</p>
       <p className="auth-signin-writeup">
@@ -124,4 +134,4 @@ export default reduxForm({
   form: "loginForm",
   validate,
 })(loginForm);
-
+ 
