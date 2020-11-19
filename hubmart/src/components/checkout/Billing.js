@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { reduxForm } from "redux-form";
+import "./styles/checkout-login.scss";
 import { fetchAddressBook } from "../../actions/auth/actions";
 
 function Billing({ handleSubmit, billing_address }) {
@@ -18,6 +19,23 @@ return (
     return (
     <div key={address.id}>
       <form onSubmit={handleSubmit}>
+      <div className="checkout-container">
+      <p className='checkout-title'>Checkout</p>
+      <div className="checkout-scroll">
+      <div className="inflow-scroll"></div>
+        <div className="first-scroll">
+        <p className="first-scroll-writeup">1</p>
+        </div>
+          <p className="second-scroll">2</p>
+        <div className="third-scroll">
+        <p className="third-scroll-writeup">3</p>
+        </div>
+        <div className="fourth-scroll">
+        <p className="fourth-scroll-writeup">4</p>
+        </div>
+        <div className="outflow-scroll"></div>
+      </div>
+      </div>
         <h3 className="billing-header">Billing Details</h3>
         <div className="labels">
           <label id="firstname">First name *</label>

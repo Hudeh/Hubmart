@@ -54,8 +54,10 @@ function LoginForm(props) {
   const { pristine, submitting } = props;
 
   return (
+    
     <div className="login-container">
       <p className="auth-title">Login</p>
+      
       <form onSubmit={props.handleSubmit(onSubmit)} className="login-form">
         <Field name="email" type="email" component={renderField} label="Email" />
         <Field name="password" type="password" component={renderField} label="Password" />
