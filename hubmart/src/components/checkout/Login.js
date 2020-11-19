@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import { loginUser } from "../../actions/auth/actions";
-import "./styles/checkout-login.scss"
+import "./styles/checkout-login.scss";
 import {
   authUserSelector,
   showMessageSelector,
@@ -28,7 +28,9 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => {
       <label>{label}</label>
       <div className="checkout-renderfield">
         <input {...input} type={type} className="checkout-renderfield-input" />
-        {touched && error && <span className="checkout-renderfield-error">{error}</span>}
+        {touched && error && (
+          <span className="checkout-renderfield-error">{error}</span>
+        )}
       </div>
     </div>
   );
@@ -51,36 +53,58 @@ function LoginForm(props) {
   if (props.isAuthenticated) {
     return <Redirect to="/checkout" />;
   }
-  const { pristine, submitting} = props;
+  const { pristine, submitting } = props;
 
   return (
     <div className="checkout-container">
+      <div className="checkout-scroll">
+        <div className="first-scroll">36</div>
+          <p className="second-scroll">1</p>
+        <div className="third-scroll">66</div>
+      </div>
       <p className="auth-title">Welcome back! Sign in to your account.</p>
-      <p className="auth-signin-writeup">If you have shopped with us before, please enter your details in the boxes below.
-       If you are a new customer,
-       please proceed to the Billing &  <br/>Shipping section.</p>
+      <p className="auth-signin-writeup">
+        If you have shopped with us before, please enter your details in the
+        boxes below. If you are a new customer, please proceed to the Billing &{" "}
+        <br />
+        Shipping section.
+      </p>
       <form onSubmit={props.handleSubmit(onSubmit)} className="login-form">
-          <div className="container">
-        <Field name="email" type="email" component={renderField} label="Email" />
-        <Field name="password" type="password" component={renderField} label="Password" />
-        <Field name="non_field_errors" type="hidden" component={hiddenField} />
-       <div className='checkout'>
-        <input type='checkbox'/>
-        <p className='checkbox'>Remember me</p>
-       <a href="/password-reset" className='password-reset'>Lost your password?</a>
-        <button className="checkout-login-btn" disabled={pristine || submitting}>
-          Login
-        </button>
-        <button className='back-btn'>
-          Back to Cart
-        </button>
-        <button className='skip-btn'>
-          Skip Login to Checkout
-        </button>
-        </div>
+        <div className="container">
+          <Field
+            name="email"
+            type="email"
+            component={renderField}
+            label="Email"
+          />
+          <Field
+            name="password"
+            type="password"
+            component={renderField}
+            label="Password"
+          />
+          <Field
+            name="non_field_errors"
+            type="hidden"
+            component={hiddenField}
+          />
+          <div className="checkout">
+            <input type="checkbox" />
+            <p className="checkbox">Remember me</p>
+            <a href="/password-reset" className="password-reset">
+              Lost your password?
+            </a>
+            <button
+              className="checkout-login-btn"
+              disabled={pristine || submitting}
+            >
+              Login
+            </button>
+            <button className="back-btn">Back to Cart</button>
+            <button className="skip-btn">Skip Login</button>
+          </div>
         </div>
       </form>
-      
     </div>
   );
 }
@@ -98,5 +122,5 @@ const loginForm = connect(mapStateToProps, { loginUser })(LoginForm);
 
 export default reduxForm({
   form: "loginForm",
-  validate
+  validate,
 })(loginForm);
