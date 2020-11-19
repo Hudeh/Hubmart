@@ -24,11 +24,11 @@ const FeatureProducts = ({ isLoading, allProducts, addCartItems }) => {
       <div className="product_card" key={product.id}>
         <div className="product_heading">
           <span className="product_slug">{product.category}</span>
-          <Link className="product_links" to={`/products/${product.id}/${product.name}`}>
+          <Link className="product_links" to={`/products/${product.id}/${product.item}`}>
             <div className="product_thumbnail">
               <img src={product.image} alt="product_thumbnail" />
             </div>
-            <h2 className="product_title">{product.name}</h2>
+            <h2 className="product_title">{product.item}</h2>
           </Link>
         </div>
         <div className="product_addcart_price">

@@ -3,14 +3,14 @@ import { connect } from "react-redux";
 import { removeCartItems, addCartItems, reduceCartItem } from "../../actions/cart/actions";
 
 const ViewCartItem = ({ cartItem, removeCartItems,addCartItems,reduceCartItem }) => {
-  const { name, image, quantity, price } = cartItem;
+  const { item, image, quantity, price } = cartItem;
   const total = quantity * price;
   return (
     <div className="viewcart-item">
       <div className="image-container">
         <img src={image} />
       </div>
-      <span className="name">{name}</span>
+      <span className="name">{item}</span>
       <span className="price">{price}</span>
       <span className="quantity">
         <div className="arrow" onClick={() => reduceCartItem(cartItem)}>

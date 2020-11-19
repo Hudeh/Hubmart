@@ -65,6 +65,7 @@ export default (state = INIT_STATE, action) => {
     case FETCH_ORDERS_SUCCESS:
       return { ...state, orders: action.payload };
     case PLACE_ORDERS_SUCCESS:
+      return { ...state, orders: action.payload };
     default:
       return state;
   }

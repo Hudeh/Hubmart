@@ -49,7 +49,7 @@ const ProductDetails = (props) => {
           <img alt="product" src={singleProduct.image} className="product-item-img" />
           <div className="product-item-properties">
             <p className="product-item-slug">HubDeli</p>
-            <p className="product-item-name">{singleProduct.name}</p>
+            <p className="product-item-name">{singleProduct.item}</p>
             <p className="compare-wishlist">
               {" "}
               Add to Wishlist <span>Compare</span>

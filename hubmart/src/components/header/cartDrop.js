@@ -16,7 +16,7 @@ const CartDropDown = ({ cartItems, removeCartItems,toggleCartHidden, history }) 
             {cartItems.map((cartitem) => (
               <CartProductItem
                 key={cartitem.id}
-                item={cartitem}
+                items={cartitem}
                 removeCartItems={removeCartItems}
               />
             ))}
