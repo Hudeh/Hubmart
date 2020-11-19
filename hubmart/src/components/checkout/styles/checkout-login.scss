@@ -2,7 +2,7 @@
   .auth-title{
            font-size: large;
            font-weight: 500;
-          margin-left: 180px;
+          margin-left: 195px;
           margin-top: 200px;
           margin-bottom: -100px;
   
@@ -11,18 +11,19 @@
           font-size: large;
           font-weight: 500;
           margin-top: 120px;
-         margin-left: 180px;
+         margin-left: 195px;
          margin-bottom: -100px;
  
        }
   display: block;
-  padding: 10px;
+  padding: 20px;
   margin: 10px 0 0 0;
   max-width: auto;
   height: 800px;
   .login-renderfield-layout {
     width: 35vw;
-    margin: 150px -30px 0 80px;
+  margin-top: 180px;
+  margin-left: 100px;
     height: 400px;
     width: 1000px;
   }
@@ -35,6 +36,8 @@
                background-color: #efecef;
                height: 43px;
                outline: none;
+              margin-top: 10px;
+               padding-left: 20px;
                border:1px solid#dddd;
                border-bottom-left-radius:20px;
            border-top-left-radius: 20px;
@@ -50,16 +53,17 @@
               margin-top: 250px;
             }
           .checkout input {
-            margin-left: -1000px;
+            margin-top: 35px;
+            margin-left: -1100px;
           }
                 .checkbox {
-                  margin-top: -4px;
+                  margin-top:30px;
                   width: 500px;
                   margin-left: 5px;
                   font-weight: 500;
                 }
                 .login-btn {
-                  margin-top: 50px;
+                  margin-top: 70px;
                  margin-left: -160px;
                   width: 97px;
                    height: 47px;
@@ -81,7 +85,7 @@
                 .password-reset {
                   color: #014cac;
                   font-weight: 500;
-                  margin-top: 120px;
+                  margin-top: 140px;
                   margin-left: -520px;
                 }
               
@@ -89,6 +93,7 @@
                   width: 139px;
                   height: 47px;
                   margin-top: 250px;
+                  margin-left: -100px;
                   outline: none;
                   border: none;
                   cursor: pointer;
@@ -101,7 +106,7 @@
                   width:139px;
                   height: 47px;
                   margin-top: 250px;
-                  margin-left: 500px;
+                  margin-left: 600px;
                   outline: none;
                   cursor: pointer;
                   border: none;
