@@ -24,11 +24,11 @@ const validate = (values) => {
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => {
   return (
-    <div className="login-renderfield-layout">
+    <div className="checkout-renderfield-layout">
       <label>{label}</label>
-      <div className="login-renderfield">
-        <input {...input} type={type} className="login-renderfield-input" />
-        {touched && error && <span className="login-renderfield-error">{error}</span>}
+      <div className="checkout-renderfield">
+        <input {...input} type={type} className="checkout-renderfield-input" />
+        {touched && error && <span className="checkout-renderfield-error">{error}</span>}
       </div>
     </div>
   );
@@ -36,7 +36,7 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => {
 
 const hiddenField = ({ type, meta: { error } }) => {
   return (
-    <div className="login-renderfield-error">
+    <div className="checkout-renderfield-error">
       <input type={type} />
       {error && <div className="renderfield-error">{error}</div>}
     </div>
@@ -54,7 +54,7 @@ function LoginForm(props) {
   const { pristine, submitting} = props;
 
   return (
-    <div className="login-container">
+    <div className="checkout-container">
       <p className="auth-title">Welcome back! Sign in to your account.</p>
       <p className="auth-signin-writeup">If you have shopped with us before, please enter your details in the boxes below.
        If you are a new customer,
@@ -67,8 +67,8 @@ function LoginForm(props) {
        <div className='checkout'>
         <input type='checkbox'/>
         <p className='checkbox'>Remember me</p>
-        <p className='password-reset'>Lost your password?</p>
-        <button className="login-btn" disabled={pristine || submitting}>
+       <a href="/password-reset" className='password-reset'>Lost your password?</a>
+        <button className="checkout-login-btn" disabled={pristine || submitting}>
           Login
         </button>
         <button className='back-btn'>

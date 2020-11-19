@@ -1,4 +1,4 @@
-.login-container {
+.checkout-container {
   .auth-title{
            font-size: large;
            font-weight: 500;
@@ -20,7 +20,7 @@
   margin: 10px 0 0 0;
   max-width: auto;
   height: 800px;
-  .login-renderfield-layout {
+  .checkout-renderfield-layout {
     width: 35vw;
   margin-top: 180px;
   margin-left: 100px;
@@ -28,10 +28,10 @@
     width: 1000px;
   }
 
-  .login-renderfield {
+  .checkout-renderfield {
              width: 33vw;
   }
-             .login-renderfield-input {
+             .checkout-renderfield-input {
                width: 470px;
                background-color: #efecef;
                height: 43px;
@@ -53,17 +53,17 @@
               margin-top: 250px;
             }
           .checkout input {
-            margin-top: 35px;
+            margin-top: 55px;
             margin-left: -1100px;
           }
                 .checkbox {
-                  margin-top:30px;
+                  margin-top:50px;
                   width: 500px;
                   margin-left: 5px;
                   font-weight: 500;
                 }
-                .login-btn {
-                  margin-top: 70px;
+                .checkout-login-btn {
+                  margin-top: 90px;
                  margin-left: -160px;
                   width: 97px;
                    height: 47px;
@@ -78,21 +78,22 @@
                   border-bottom-right-radius: 20px;
                   border-top-right-radius: 20px;
                 }
-                .login-btn:hover, .back-btn:hover, .skip-btn:hover {
+                .checkout-login-btn:hover, .back-btn:hover, .skip-btn:hover {
                   background-color: black;
                   color: white;
                 }
                 .password-reset {
                   color: #014cac;
                   font-weight: 500;
-                  margin-top: 140px;
+                  margin-top: 160px;
                   margin-left: -520px;
+                    text-decoration: none;
                 }
               
                 .back-btn {
                   width: 139px;
                   height: 47px;
-                  margin-top: 250px;
+                  margin-top: 320px;
                   margin-left: -100px;
                   outline: none;
                   border: none;
@@ -105,7 +106,7 @@
                 .skip-btn {
                   width:139px;
                   height: 47px;
-                  margin-top: 250px;
+                  margin-top: 320px;
                   margin-left: 600px;
                   outline: none;
                   cursor: pointer;
