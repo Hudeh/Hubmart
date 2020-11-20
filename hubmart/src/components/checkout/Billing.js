@@ -35,6 +35,12 @@ return (
         </div>
         <div className="outflow-scroll"></div>
       </div>
+      <div className='scroll-words'>
+        <p className='scroll-word-login'>Login</p>
+        <p className='scroll-word-billing'>Billing</p>
+        <p className='scroll-word-shipping'>Shipping</p>
+        <p className='scroll-word-payment'>Order & Payment</p>
+      </div>
       </div>
         <h3 className="billing-header">Billing Details</h3>
         <div className="labels">

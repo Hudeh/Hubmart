@@ -21,6 +21,7 @@
       margin-top: -12px;
       margin-left: -25px;
       width: 20px;
+      cursor: pointer;
       text-align: center;
       border-radius: 50%;
       border:3px solid#dddd;
@@ -32,6 +33,7 @@
       text-align: center;
       border-radius: 50%;
       height: 100%;
+      cursor: pointer;
       border:3px solid#dddd;
       color:black;
     }
@@ -44,6 +46,7 @@
       margin-left: 200px;
       width: 20px;
       text-align: center;
+      cursor: pointer;
       border-radius: 50%;
       border:3px  solid#dddd;
       color:black;
@@ -60,6 +63,7 @@
       text-align: center;
       border-radius: 50%;
       border:3px solid#dddd;
+      cursor: pointer;
       color:black;
     }
     .outflow-scroll {
@@ -67,17 +71,34 @@
        width: 200px;
        border-top:3px solid#dddd;
      }
-  }
+    }
+       .scroll-words {
+         display: flex;
+         margin-left: 390px;
+         font-weight: 500;
+         margin-top: -20px;
+         font-size: 15px;
+         color: #aaaa ;
+         .scroll-word-billing{
+          margin-left: 186px;
+         }
+         .scroll-word-shipping{
+          margin-left: 180px;
+         }
+         .scroll-word-payment{
+          margin-left: 165px;
+         }
+       }
   .auth-title{
-           font-size: large;
+           font-size: 15px;
            font-weight: 500;
           margin-left: 195px;
-          margin-top: 50px;
+          margin-top: 20px;
           margin-bottom: -100px;
   
         }
         .auth-signin-writeup{
-          font-size: large;
+          font-size: 15px;
           font-weight: 500;
           margin-top: 120px;
          margin-left: 195px;
@@ -88,10 +109,10 @@
   padding: 20px;
   margin: 10px 0 0 0;
   max-width: auto;
-  height: 800px;
+  height: 700px;
   .checkout-renderfield-layout {
     width: 35vw;
-  margin-top: 180px;
+  margin-top: 110px;
   margin-left: 100px;
     height: 400px;
     width: 1000px;
@@ -119,7 +140,7 @@
           }
             .checkout {
               display: flex;
-              margin-top: 290px;
+              margin-top: 220px;
             }
             .checkout input {
               margin-left: -1100px;
@@ -131,7 +152,7 @@
               font-weight: 500;
             }
             .checkout-login-btn {
-              margin-top: 60px;
+              margin-top: 40px;
              margin-left: -170px;
               width: 97px;
                height: 47px;
@@ -153,7 +174,7 @@
             .password-reset {
               color: #014cac;
               font-weight: 500;
-              margin-top: 130px;
+              margin-top: 110px;
               margin-left: -520px;
               text-decoration: none;
             }

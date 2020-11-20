@@ -141,6 +141,12 @@ const OrderPreview = ({ cart, placeOrder }) => {
         </div>
         <div className="outflow-scroll"></div>
       </div>
+      <div className='scroll-words'>
+        <p className='scroll-word-login'>Login</p>
+        <p className='scroll-word-billing'>Billing</p>
+        <p className='scroll-word-shipping'>Shipping</p>
+        <p className='scroll-word-payment'>Order & Payment</p>
+      </div>
       </div>
       <form onSubmit={handleSubmit}>
         <input

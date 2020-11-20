@@ -25,6 +25,12 @@ const Shipping = (props) =>{
         </div>
         <div className="outflow-scroll"></div>
       </div>
+      <div className='scroll-words'>
+        <p className='scroll-word-login'>Login</p>
+        <p className='scroll-word-billing'>Billing</p>
+        <p className='scroll-word-shipping'>Shipping</p>
+        <p className='scroll-word-payment'>Order & Payment</p>
+      </div>
       </div>
         <h3 className="shipping-header">Shipping Details</h3>
         <div className="shipping-account">

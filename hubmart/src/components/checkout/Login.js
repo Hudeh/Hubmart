@@ -72,6 +72,12 @@ function LoginForm(props) {
         </div>
         <div className="outflow-scroll"></div>
       </div>
+      <div className='scroll-words'>
+        <p className='scroll-word-login'>Login</p>
+        <p className='scroll-word-billing'>Billing</p>
+        <p className='scroll-word-shipping'>Shipping</p>
+        <p className='scroll-word-payment'>Order & Payment</p>
+      </div>
       <p className="auth-title">Welcome back! Sign in to your account.</p>
       <p className="auth-signin-writeup">
         If you have shopped with us before, please enter your details in the
