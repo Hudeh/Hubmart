@@ -1,5 +1,6 @@
 import React from 'react'
 import {Provider} from 'react-redux';
+import './index.scss';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import {store, persistor} from './store/index';
@@ -12,6 +13,10 @@ const NotFoundPage = () => {
 }
 function App() {
   return (
+    
+    <div className='bg-img'>
+
+   
     <Provider store={store}>
       <Router>
       <PersistGate persistor={persistor}>
@@ -23,6 +28,8 @@ function App() {
     </PersistGate>
     </Router>
     </Provider>
+     </div>
+     
   );
 }
 export default App;

@@ -1,4 +1,8 @@
+.bg-img{
+  background-image: url(./assets/images/cart2.png);
+}
 body {
+  z-index: 1500;
   margin: 0;
   font-family:'Open Sans';
   -webkit-font-smoothing: antialiased;
