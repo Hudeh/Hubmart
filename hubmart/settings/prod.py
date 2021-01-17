@@ -3,7 +3,7 @@
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS += ['http://domain.com']
+ALLOWED_HOSTS += ['hubmart-clone.heroku.com']
 WSGI_APPLICATION = 'hubmart.wsgi.prod.application'
 
 DATABASES = {
