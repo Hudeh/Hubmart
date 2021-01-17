@@ -1,0 +1,368 @@
+.slide-container {
+    max-width: 1600px;
+    margin-top: 1px;
+    box-shadow: 0 10px 8px 0 rgba(54, 54, 54, 0.2), 0 1px 1px 0 rgba(255, 255, 255, 0.19);
+    z-index: 1 ;
+}
+ 
+
+.each-fadeone-a {
+    display: flex;
+}
+  
+.each-fadeone {
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(to bottom, #ffffff, #dfdf8e);
+    height: 300px;
+}
+.each-fadeone-a {
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(to bottom, #ffffff, #dfdf8e);
+    height: 300px;
+}
+.each-fadeone img{
+    width: 30%;
+
+}
+.each-fadeone-a img{
+    width: 65%;
+}
+ 
+.each-fadeone h2 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: #e94d31;
+    font-size: 3.5em;
+}
+.each-fadeone-a h2 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: #e94d31;
+    font-size: 3rem;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.topleft{
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 3em;
+    left: 16px;
+}
+.topright {
+    position: absolute;
+    margin-top: 1em;
+    margin-right: 4em;
+    right: 16px;
+}
+.promo-banner{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+  @media screen and (max-width: 657px) {
+      .slide-container {
+          height:220px;
+          border: 2px solid black;
+          max-width: 100%;
+      }
+    .slide-container{ margin: 0; padding: 0;}
+    .each-fadeone{height: 220px;}
+    .each-fadeone .topleft .topright .center{
+        height: 220px; 
+        padding: 0;
+        margin: 0;}
+        .topleft {
+              margin-top :20px;
+              margin-left:-10px;
+              height:220px;
+        }
+        .center {
+              margin-top :20px;
+              margin-left:-10px;
+              height:220px;
+              font-size:20px;
+        }
+        .topright {
+              margin-top :80px;
+              min-height:220px;
+              
+        }
+    .each-fadeone .topright{
+        height: 100px; 
+        padding: 0;
+        margin: 0;}
+    .each-fadeone-a{height: 220px;
+    
+    }
+    .drink1 {
+        min-height:20px;
+        font-size:10px;
+        display:none;
+    }
+    .drink2 {
+        margin-top:30px;
+       min-height:100%;
+    }
+    .each-fadeone h2{font-size: 1rem;}
+    .each-fadeone-a img{height:120px ;}
+    .each-fadeone-a .container img{
+       min-height: 220px;
+        width: 150px;
+        margin-top: 15px;
+    }.each-fadeone-a img{height: 120px; 
+        padding: 0;
+        margin: 0;}
+    .each-fadeone-a .container .btn{
+        top: 17%; 
+        position: fixed;
+        float: left;
+        left: 0;
+        margin-left: 70px;
+        margin-top: 10px;
+        width: 70px;
+        font-size: 10px;
+        padding: 0;
+        font-weight: 20px;
+        height: 25px;
+    }
+  }
+
+.container {
+    position: relative;
+    width: 30%;
+    height: 100px;
+}
+
+  /* Make the image responsive */
+.container img {
+    width: 100%;
+    max-height: 180px;
+    margin-top: 5em;
+}
+  
+  /* Style the button and place it in the middle of the container-one/image */
+.container .slide-btn {
+  margin-top:80px; 
+  margin-left:2px;
+  height:50px;
+  width:170px;
+  color:white;
+  background-color :black;
+  border-radius:20px;
+  cursor: pointer;
+  outline: none;
+}
+  
+.container .slide-btn:hover {
+    background-color: black;
+}
+
+/* first slide end*/
+@media screen and (max-width: 768px) {
+    .slide-container {
+        height:220px;
+    }
+  .slide-container{ margin: 0; padding: 0;}
+  .each-fadeone{height: 220px;}
+  .each-fadeone .topleft .topright .center{
+      height: 220px; 
+      padding: 0;
+      margin: 0;}
+      .topleft {
+            margin-top :20px;
+            margin-left:-10px;
+            height:220px;
+      }
+      .center {
+            margin-top :20px;
+            margin-left:-10px;
+            height:220px;
+            font-size:20px;
+      }
+      .topright {
+            margin-top :80px;
+            min-height:220px;
+
+      }
+  .each-fadeone .topright{
+      height: 100px; 
+      padding: 0;
+      margin: 0;}
+  .each-fadeone-a{height: 220px;
+
+  }
+  .drink1 {
+      min-height:20px;
+      font-size:10px;
+      display:none;
+  }
+  .drink2 {
+      margin-top:30px;
+     min-height:100%;
+  }
+  .each-fadeone h2{font-size: 1rem;}
+  .each-fadeone-a img{height:120px ;}
+  .each-fadeone-a .container img{
+     min-height: 220px;
+      width: 150px;
+      margin-top: 15px;
+  }.each-fadeone-a img{height: 120px; 
+      padding: 0;
+      margin: 0;}
+  .each-fadeone-a .container .btn{
+      top: 17%; 
+      position: fixed;
+      float: left;
+      left: 0;
+      margin-left: 70px;
+      margin-top: 10px;
+      width: 70px;
+      font-size: 10px;
+      padding: 0;
+      font-weight: 20px;
+      height: 25px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 30%;
+  height: 100px;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  max-height: 180px;
+  margin-top: 5em;
+}
+
+/* Style the button and place it in the middle of the container-one/image */
+.container .slide-btn {
+margin-top:80px; 
+margin-left:2px;
+height:50px;
+width:170px;
+color:white;
+background-color :black;
+border-radius:20px;
+}
+
+.container .slide-btn:hover {
+  background-color: black;
+}
+@media screen and (max-width: 1300px) {
+    .slide-container {
+        height:220px;
+        width: 100%;
+    }
+  .slide-container{ margin: 0; padding: 0;}
+  .each-fadeone{height: 220px;}
+  .each-fadeone .topleft .topright .center{
+      height: 220px; 
+      padding: 0;
+      margin: 0;}
+      .topleft {
+            margin-top :20px;
+            margin-left:-10px;
+            height:220px;
+      }
+      .center {
+            margin-top :20px;
+            margin-left:-10px;
+            height:220px;
+            font-size:20px;
+      }
+      .topright {
+            margin-top :80px;
+            min-height:220px;
+
+      }
+  .each-fadeone .topright{
+      height: 100px; 
+      padding: 0;
+      margin: 0;}
+  .each-fadeone-a{height: 220px;
+
+  }
+  .drink1 {
+      min-height:20px;
+      font-size:10px;
+      display:none;
+  }
+  .drink2 {
+      margin-top:30px;
+     min-height:100%;
+  }
+  .each-fadeone h2{font-size: 1rem;}
+  .each-fadeone-a img{height:120px ;}
+  .each-fadeone-a .container img{
+     min-height: 220px;
+      width: 150px;
+      margin-top: 15px;
+  }.each-fadeone-a img{height: 120px; 
+      padding: 0;
+      margin: 0;}
+  .each-fadeone-a .container .btn{
+      top: 17%; 
+      position: fixed;
+      float: left;
+      left: 0;
+      margin-left: 70px;
+      margin-top: 10px;
+      width: 70px;
+      font-size: 10px;
+      padding: 0;
+      font-weight: 20px;
+      height: 25px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 30%;
+  height: 100px;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  max-height: 180px;
+  margin-top: 5em;
+}
+
+/* Style the button and place it in the middle of the container-one/image */
+.container .slide-btn {
+margin-top:80px; 
+margin-left:2px;
+height:50px;
+width:170px;
+color:white;
+background-color :black;
+border-radius:20px;
+}
+
+.container .slide-btn:hover {
+  background-color: black;
+}   
+
+
+
+

@@ -1,0 +1,32 @@
+.topnav{
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(1px + 2vmin);
+  color: black;
+  border-bottom: .1rem rgb(201, 199, 199) solid;
+  height: 45px;
+  padding-left: 6rem;
+  padding-right: 5.2rem;
+  font-weight: 450;
+}
+.topnav p{
+  cursor: pointer;
+}
+@media only screen and (max-width: 657px) {
+  .topnav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .topnav {
+    display: none;
+  }
+}
