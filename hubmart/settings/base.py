@@ -4,7 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '!_l_av7v@@^ei8q@z&^$16*7qh50v-5%v^$pz9k^!1v^0if=w%'
 DEBUG = True
-ALLOWED_HOSTS = ['hubmart-clone.heroku.com']
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'suit',
@@ -25,7 +25,6 @@ INSTALLED_APPS = [
     'safedelete',
     'knox',
     'graphene_django',
-    'django_countries',
 
     #app
     'Products',
