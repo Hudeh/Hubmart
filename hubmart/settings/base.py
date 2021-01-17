@@ -4,7 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '!_l_av7v@@^ei8q@z&^$16*7qh50v-5%v^$pz9k^!1v^0if=w%'
 DEBUG = False
-ALLOWED_HOSTS = ['localhost:8000','localhost','hubmart-clone.heroku.com']
+ALLOWED_HOSTS = ['hubmart-clone.heroku.com']
 
 INSTALLED_APPS = [
     'suit',
