@@ -9,7 +9,7 @@ import {
   showMessageSelector,
   alertMessageSelector,
 } from "../../reducers/authReducer/selector";
-import { renderField, hiddenField, validate} from "./LoginValidation";
+import { renderField, hiddenField, validate } from "./LoginValidation";
 
 
 function LoginForm(props) {
@@ -27,11 +27,11 @@ function LoginForm(props) {
     <div className="login-container">
       <p className="auth-title">Login</p>
       
-      <form onSubmit={props.handleSubmit(onSubmit)} className="login-form">
+      <form onSubmit={props.handleSubmit(onSubmit)}>
         <Field name="email" type="email" component={renderField} label="Email" />
         <Field name="password" type="password" component={renderField} label="Password" />
         <Field name="non_field_errors" type="hidden" component={hiddenField} />
-        <button className="login-btn" disabled={pristine || submitting}>
+        <button className="login-btn" disabled={submitting}>
           Login
         </button>
       </form>
@@ -56,6 +56,6 @@ const loginForm = connect(mapStateToProps, { loginUser })(LoginForm);
 export default reduxForm({
   form: "loginForm",
   touchOnBlur: true,
-  validate,
+  validate ,
 })(loginForm);
 

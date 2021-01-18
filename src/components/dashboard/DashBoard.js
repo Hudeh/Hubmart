@@ -63,7 +63,7 @@ function DashBoard({ match,logoutUser, history, location }) {
               <li>
                 <NavLink
                   style={{ textDecoration: "none", color: "#000000" }}
-                  to={`${match.path}/download`}
+                  to={`${match.path}/downloads`}
                   activeStyle={{ textDecoration: "none", color: "#F15A22", marginLeft: "-1rem" }}
                 >
                   Downloads
@@ -125,15 +125,15 @@ function DashBoard({ match,logoutUser, history, location }) {
         <div className="dashbord-view">
           <Switch>
             <Route exact path={`${match.path}`} render={(props) => <MyAccount {...props} />} />
-            <Route path={`${match.path}/payment-method/`} component={PaymentDetails} />
-            <Route path={`${match.path}/address/billing/`} component={Billing} />
-            <Route path={`${match.path}/address/edit-billing/:_id/:id/`} component={EditBilling} />
+            <Route path={`${match.path}/payment-method`} component={PaymentDetails} />
+            <Route path={`${match.path}/address/billing`} component={Billing} />
+            <Route path={`${match.path}/address/edit-billing/:_id/:id`} component={EditBilling} />
             <Route path={`${match.path}/address/shipping/`} component={Shipping} />
-            <Route path={`${match.path}/address/edit-shipping/:_id/:id/`} component={EditShipping} />
+            <Route path={`${match.path}/address/edit-shipping/:_id/:id`} component={EditShipping} />
             <Route path={`${match.path}/address`} component={Address} />
-            <Route path={`${match.path}/account-details/`} component={AccountView} />
-            <Route path={`${match.path}/orders/`} component={OrderView} />
-            <Route path={`${match.path}/download/`} component={Download} />
+            <Route path={`${match.path}/account-details`} component={AccountView} />
+            <Route path={`${match.path}/orders`} component={OrderView} />
+            <Route path={`${match.path}/downloads`} component={Download} />
           </Switch>
         </div>
       </div>

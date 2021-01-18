@@ -10,37 +10,11 @@ import {
   tokenSelector
 } from "../../reducers/authReducer/selector";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const validate = (values) => {
-  const errors = {};
-  if (!values.email) {
-    errors.email = "Required";
-  }
-  if (!values.password) {
-    errors.password = "Required";
-  }
-  return errors;
-};
+import { renderField, hiddenField, signupValidate } from "./LoginValidation";
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => {
-  return (
-    <div className="signin-renderfield-layout">
-      <label>{label}</label>
-      <div className="signin-renderfield">
-        <input {...input} type={type} className="signin-renderfield-input" />
-        {touched && error && <span className="signin-renderfield-error">{error}</span>}
-      </div>
-    </div>
-  );
-};
 
-const hiddenField = ({ type, meta: { error } }) => {
-  return (
-    <div>
-      <input type={type} />
-      {error && <div>{error}</div>}
-    </div>
-  );
-};
+
+
 const SignupForm = (props) => {
   const onSubmit = (formValues) => {
     props.registerUser(formValues);
@@ -136,5 +110,5 @@ const signupForm = connect(mapStateToProps, { registerUser })(SignupForm);
 export default reduxForm({
   form: "SignupForm",
   touchOnBlur: false,
-  validate,
+  signupValidate,
 })(signupForm);

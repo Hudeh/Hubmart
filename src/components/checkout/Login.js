@@ -9,7 +9,7 @@ import {
   alertMessageSelector,
 } from "../../reducers/authReducer/selector";
 import PropTypes from "prop-types";
-import { renderField, hiddenField, validate } from "../auth/LoginValidation";
+import { renderField, hiddenField, validate  } from "../auth/LoginValidation";
 
 function LoginForm(props) {
   const onSubmit = (formValues) => {
@@ -69,5 +69,5 @@ const loginForm = connect(mapStateToProps, { loginUser })(LoginForm);
 
 export default reduxForm({
   form: "loginForm",
-  validate,
+  validate ,
 })(loginForm);

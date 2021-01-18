@@ -36,37 +36,6 @@
       border-bottom-right-radius: 10px;
       border-top-right-radius: 10px;
      }
-    .login-renderfield-layout {
-      width: 35vw;
-      margin: 20px 20px 0 20px;
-  
-
-      .login-renderfield {
-        width: 33vw;
-        .login-renderfield-input {
-          width: 33vw;
-          height: 40px;
-          border: .1rem rgb(211, 208, 208) solid;
-          outline: none;
-          border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      border-top-right-radius: 10px;
-        }
-        .login-renderfield-error {
-          color: red;
-          margin: 15px;
-        }
-      }
-    
-    }
-          .renderfield-error {
-            color: red;
-            width: 33vw;
-            font-size: 15px;
-            margin-left: 20px;
-            font-weight: 500;
-          }
   }
   .signup-container {
     .auth-title{
@@ -134,28 +103,6 @@
       margin-left: 30px;
       font-weight: 200;
     }
-    .signin-renderfield-layout {
-      width: 35vw;
-      margin: 20px 20px 0 20px;
-      
-
-      .signin-renderfield {
-        width: 33vw;
-        .signin-renderfield-input {
-          width: 33vw;
-          border: .1rem rgb(211, 208, 208) solid;
-          height: 40px;
-          outline: none;
-          border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      border-top-right-radius: 10px;
-        }
-        .signin-renderfield-error {
-          color: red;
-        }
-      }
-    }
   }
   .text{
      margin: 1rem 0 0 1rem;
@@ -181,6 +128,29 @@
     text-align: center;
     padding-top: 5px;
     background-color: #ffffff;
+  }
+  .renderfield-layout {
+    width: 35vw;
+    margin: 20px 20px 0 20px;
+    
+
+    .renderfield {
+      width: 33vw;
+      .renderfield-input {
+        width: 33vw;
+        border: .1rem rgb(211, 208, 208) solid;
+        height: 45px;
+        outline: none;
+        border-radius: 20px;
+      }
+      .renderfield-error {
+        color: red;
+        width: 33vw;
+        font-size: 15px;
+        margin-left: 20px;
+        font-weight: 500;
+      }
+    }
   }
 }
 @media only screen and (max-width: 657px) {

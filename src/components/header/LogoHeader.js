@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
 import SearchIcon from "@material-ui/icons/Search";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import { Link, withRouter } from "react-router-dom";
@@ -8,10 +7,6 @@ import Logo from "../../assets/images/Logo.png";
 import CartDropDown from "./cartDrop";
 import Cart from "./cartIcon";
 import { openNav, closeNav } from "./util";
-import { createStructuredSelector } from "reselect";
-import { authUserSelector } from "../../reducers/authReducer/selector";
-import { CartHiddenDrop, UserDropDownSelector } from "../../reducers/headerReducer/selector";
-import { toggleUserDropHidden } from "../../actions/header/actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import UserDropDown from "./UserDropDown";
 
@@ -81,8 +76,8 @@ const LogoHeader = ({ history, isAuthenticated }) => {
       <div className="header" id="myheader">
         <div className="carticon">{<button onClick={openNav}>&#9776;</button>}</div>
         <Link to="/">
-          <div href="#default" className="logo">
-            <img src={Logo} />
+          <div href="#default" className="logo" >
+            <img src={Logo} alt="logo" />
           </div>
         </Link>
         <div className="header-button">{button}</div>
@@ -97,7 +92,7 @@ const LogoHeader = ({ history, isAuthenticated }) => {
             ) : (
               <FontAwesomeIcon icon="user" className="header-icon" onClick={handleClick} />
             )}
-            {open ? <UserDropDown /> : null}
+            {open ? <UserDropDown handleClickAway={handleClickAway} /> : null}
           </div>
         </ClickAwayListener>
         <ClickAwayListener onClickAway={handleCartHiddenAway}>
@@ -121,12 +116,6 @@ const LogoHeader = ({ history, isAuthenticated }) => {
     </>
   );
 };
-const mapStateToProps = createStructuredSelector({
-  cartHidden: CartHiddenDrop,
-  isAuthenticated: authUserSelector,
-});
-const mapDispatchToProps = (dispatch) => ({
-  UserDropHidden: () => dispatch(toggleUserDropHidden()),
-});
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LogoHeader));
+
+export default withRouter(LogoHeader);

@@ -33,7 +33,7 @@ const initialState = {
   isAuthenticated: null,
   isLoading: false,
   currentUser: null,
-  errors: {},
+  errors: [],
   alertMessage: "",
   showMessage: false,
   billingAddress: [],
@@ -73,6 +73,10 @@ export default (state = initialState, action) => {
 
     case REGISTER_FAIL:
     case LOGIN_FAIL:
+      return{
+        ...state,
+        errors:payload
+      }
     case AUTH_ERROR:
     case LOGOUT_SUCCESS:
       localStorage.removeItem("token");

@@ -70,8 +70,8 @@ export const loginUser = ({ email, password }) => async (dispatch) => {
     dispatch({ type: LOGIN_SUCCESS, payload: data });
   } catch (error) {
     // DISPATCH LOGIN_FAIL
-    dispatch({ type: LOGIN_FAIL });
-    dispatch(stopSubmit("loginForm", error.message));
+    dispatch({ type: LOGIN_FAIL,payload:error.message });
+    dispatch(stopSubmit("loginForm",{ errors:error.message}));
     // DISPATCH SET ALERT
   }
 };
