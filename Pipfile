@@ -57,6 +57,7 @@ django-countries = "*"
 django-rest-swagger = "*"
 psycopg2 = "*"
 dj-database-url = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"

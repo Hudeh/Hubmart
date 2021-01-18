@@ -1,6 +1,7 @@
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '!_l_av7v@@^ei8q@z&^$16*7qh50v-5%v^$pz9k^!1v^0if=w%'
 DEBUG = True
@@ -15,7 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #third party
+    # third party
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -26,10 +27,10 @@ INSTALLED_APPS = [
     'knox',
     'graphene_django',
 
-    #app
+    # app
     'Products',
     'UserProfile'
-  
+
 
 
 ]
@@ -37,12 +38,14 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'hubmart.urls'
@@ -80,18 +83,14 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'knox.auth.TokenAuthentication',
     ),
-    'DATETIME_FORMAT':"%m/%d/%Y %H:%M:%S"
+    'DATETIME_FORMAT': "%m/%d/%Y %H:%M:%S"
 }
-
-
-
 
 
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 AUTH_USER_MODEL = 'UserProfile.MyUser'
-
 
 
 # Django Suit configuration example
@@ -103,21 +102,22 @@ SUIT_CONFIG = {
 
     # forms
     'SHOW_REQUIRED_ASTERISK': True,  # Default True
-    'CONFIRM_UNSAVED_CHANGES': True, # Default True
+    'CONFIRM_UNSAVED_CHANGES': True,  # Default True
 
     # menu
     'SEARCH_URL': '/admin/auth/user/',
     'MENU_ICONS': {
-       'sites': 'icon-leaf',
-       'auth': 'icon-lock',
+        'sites': 'icon-leaf',
+        'auth': 'icon-lock',
     },
-    'MENU_OPEN_FIRST_CHILD': True, # Default True
+    'MENU_OPEN_FIRST_CHILD': True,  # Default True
     'MENU_EXCLUDE': ('auth.group',),
     'MENU': (
         'sites',
-        {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-        {'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
-        {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
+        {'app': 'auth', 'icon': 'icon-lock', 'models': ('user', 'group')},
+        {'label': 'Settings', 'icon': 'icon-cog',
+            'models': ('auth.user', 'auth.group')},
+        {'label': 'Support', 'icon': 'icon-question-sign', 'url': '/support/'},
     ),
 
     # misc
@@ -132,8 +132,6 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 # PASSWORD_RESET_TIMEOUT_DAYS = 2
 DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER')
-
-
 
 
 # LOGOUT_REDIRECT_URL='/login/'
