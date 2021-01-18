@@ -1,0 +1,16 @@
+Todos
+
+.1 Hearder Component
+.2 Banner
+.3 Product Display
+.4 Footer Banner
+.5 Footer
+
+
+
+SERVER SIDE TODOS:
+
+.1 User Profile
+.2 Products
+.3 Cart Order
+.4 Billing
