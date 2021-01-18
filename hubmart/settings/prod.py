@@ -5,11 +5,8 @@ import dj_database_url
 
 SECRET_KEY = ('SECRET_KEY')
 DEBUG = False
-DATABASES = {
-    'default': dj_database_url(
-        default=('DATABASE_URL')
-    )
-}
+
+DATABASES = {'default': dj_database_url.config('DATABASE_URL')}
 ALLOWED_HOSTS += ['https://hubmart-clone.heroku.com/']
 WSGI_APPLICATION = 'hubmart.wsgi.prod'
 
