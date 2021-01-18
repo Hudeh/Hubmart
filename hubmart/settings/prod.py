@@ -7,7 +7,7 @@ SECRET_KEY = ('SECRET_KEY')
 DEBUG = False
 
 DATABASES = {'default': dj_database_url.config('DATABASE_URL')}
-ALLOWED_HOSTS += ['https://hubmart-clone.heroku.com/']
+ALLOWED_HOSTS += ['https://hubmart-clone.heroku.com']
 WSGI_APPLICATION = 'hubmart.wsgi'
 
 
@@ -20,3 +20,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+CORS_ORIGIN_WHITELIST = (
+   "https://hubmart-clone.herokuapp.com","http://hubmart-clone.herokuapp.com"
+)
+CORS_ORIGIN_ALLOW_ALL = True

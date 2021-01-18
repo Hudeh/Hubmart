@@ -3,9 +3,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!_l_av7v@@^ei8q@z&^$16*7qh50v-5%v^$pz9k^!1v^0if=w%'
-DEBUG = True
-ALLOWED_HOSTS = []
+SECRET_KEY = os.environ.get('SECRET_KEY')
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'suit',

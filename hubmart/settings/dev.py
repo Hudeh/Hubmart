@@ -19,6 +19,6 @@ DATABASES = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
+    'http://localhost:3000',"https://hubmart-clone.herokuapp.com","http://hubmart-clone.herokuapp.com"
 )
 CORS_ORIGIN_ALLOW_ALL = True

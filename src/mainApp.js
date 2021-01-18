@@ -94,7 +94,7 @@ const MainApp = () =>{
                <Route path="/checkout/" component={CheckoutForm} />
                {/* <Route component={NotFoundPage}/> */}
                <Route path="/login-signup/" component={AuthLayout} />
-               <Route exact={true} path="/" component={HomePage} />
+               <Route exact={true} path="https://hubmart-clone.herokuapp.com" component={HomePage} />
            </Switch>
              </div>
          </Layout>
