@@ -5,7 +5,7 @@ from .base import *
 ALLOWED_HOSTS += ['127.0.0.1']
 DEBUG = True
 
-WSGI_APPLICATION = 'hubmart.wsgi.application'
+WSGI_APPLICATION = 'hubmart.wsgi'
 
 DATABASES = {
     'default': {
