@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn hubmart.wsgi.prod --log-file -
+web: gunicorn hubmart.wsgi.application --log-file -
