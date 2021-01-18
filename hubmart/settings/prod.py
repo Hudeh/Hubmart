@@ -8,7 +8,7 @@ DEBUG = False
 
 DATABASES = {'default': dj_database_url.config('DATABASE_URL')}
 ALLOWED_HOSTS += ['https://hubmart-clone.heroku.com']
-WSGI_APPLICATION = 'hubmart.wsgi'
+WSGI_APPLICATION = 'hubmart.wsgi.application'
 
 
 

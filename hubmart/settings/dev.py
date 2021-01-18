@@ -5,7 +5,7 @@ from .base import *
 ALLOWED_HOSTS += ['127.0.0.1']
 DEBUG = True
 
-WSGI_APPLICATION = 'hubmart.wsgi'
+WSGI_APPLICATION = 'hubmart.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -19,6 +19,6 @@ DATABASES = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',"https://hubmart-clone.herokuapp.com","http://hubmart-clone.herokuapp.com"
+    'http://localhost:3000',
 )
 CORS_ORIGIN_ALLOW_ALL = True
